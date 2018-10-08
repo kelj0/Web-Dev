@@ -11,10 +11,10 @@ presentation of that document
 -    [Applying CSS](#Applying)
 -    [Colors](#Colors)
 -    [Text](#Text)
--    [Margins, padding and borders](#Margins)
+-    [Margins,padding and borders](#Margins)
 ---
 
-### Applying CSS<a name="Applying"></a>
+#### Applying CSS<a name="Applying"></a>
 
 There are 3 ways to apply CSS to HTML:
 * Inline
@@ -153,15 +153,29 @@ h1{
 Speaks for it self
 
 #### Margins, padding and borders<a name="Margins"></a>
+
+**Margins**
 ```css
 h2{
     font-size: 32px;
     background-color: #ccc;
     margin: 20px;
     padding: 40px
-
 }
-
+```
+```
+This leaves a 20-pixel width space around the secondary header 
+and the header itself is fat from the 40-pixel width padding
+```
+**Borders**
+```css
+h2{
+    border-style: dashed;
+    border-width: 3px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color: red
+}
 ```
 
 ---
