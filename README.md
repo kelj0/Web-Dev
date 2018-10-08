@@ -29,7 +29,7 @@ Markdown
 ```
 HTML
 ```
-- [ ] - http://www.htmldog.com/guides/html/beginner/
+- [x] - http://www.htmldog.com/guides/html/beginner/
 - [ ] - http://www.htmldog.com/guides/html/intermediate/
 - [ ] - http://www.htmldog.com/guides/html/advanced/
 ```
