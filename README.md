@@ -31,7 +31,7 @@ HTML
 CSS
 ```
 - [x] - http://www.htmldog.com/guides/css/beginner/
-- [ ] - http://www.htmldog.com/guides/css/intermediate/
+- [x] - http://www.htmldog.com/guides/css/intermediate/
 - [ ] - http://www.htmldog.com/guides/css/advanced/
 ```
 JS

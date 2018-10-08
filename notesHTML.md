@@ -405,7 +405,7 @@ pull-quotes or snippets of related information in an article:
 ---
 ### Meta tags<a name="Meta"></a>
 
-### HTTP Equivalents
+#### HTTP Equivalents
 ```
 The http-equiv attribute can be used instead of the name
 attribute and will make an HTTP header, which is information
