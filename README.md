@@ -1,15 +1,10 @@
-### Repo Tree:
-```
-Web-Dev
-|--- HTML
-    |--- README.md 
-|--- CSS
-    |--- README.md 
-|--- JS
-    |--- README.md
-|--- MarkDownNotes.md
-|--- README.md 
-```
+### Notes:
+
+-	[HTML](#https://github.com/kkeglje/Web-Dev/blob/master/notesHTML.md)
+-	[CSS](#https://github.com/kkeglje/Web-Dev/blob/master/notesCSS.md)
+-	[JS](#https://github.com/kkeglje/Web-Dev/blob/master/notesJS.md)
+-	[MD](#https://github.com/kkeglje/Web-Dev/blob/master/notesMD.md)
+
 
 ## Reading checklist
 ### Week 1 (6.10-7.10)
@@ -35,7 +30,7 @@ HTML
 ```
 CSS
 ```
-- [ ] - http://www.htmldog.com/guides/css/beginner/
+- [x] - http://www.htmldog.com/guides/css/beginner/
 - [ ] - http://www.htmldog.com/guides/css/intermediate/
 - [ ] - http://www.htmldog.com/guides/css/advanced/
 ```
