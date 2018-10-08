@@ -1,9 +1,9 @@
 ### Notes:
 
--	[HTML](#https://github.com/kkeglje/Web-Dev/blob/master/notesHTML.md)
--	[CSS](#https://github.com/kkeglje/Web-Dev/blob/master/notesCSS.md)
--	[JS](#https://github.com/kkeglje/Web-Dev/blob/master/notesJS.md)
--	[MD](#https://github.com/kkeglje/Web-Dev/blob/master/notesMD.md)
+-	[HTML](https://github.com/kkeglje/Web-Dev/blob/master/notesHTML.md)
+-	[CSS](https://github.com/kkeglje/Web-Dev/blob/master/notesCSS.md)
+-	[JS](https://github.com/kkeglje/Web-Dev/blob/master/notesJS.md)
+-	[MD](https://github.com/kkeglje/Web-Dev/blob/master/notesMD.md)
 
 
 ## Reading checklist
