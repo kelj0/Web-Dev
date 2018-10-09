@@ -16,7 +16,9 @@ presentation of that document
 -    [Pseudo classes](#Pseudo)
 -    [Pseudo elements](#PseudoE)
 -    [Page Layout](#Page)
--    [Random Notes](#Random)  
+-    [Media Queries](#Media)
+-    [Transitions](#Transitions)
+-    [Random Notes](#Random)
 ---
 
 ### Applying CSS<a name="Applying"></a>
@@ -83,6 +85,48 @@ h2{
 }
 ```
 Need more colors? Go [here](https://www.w3schools.com/colors/colors_picker.asp)
+
+#### Gradients
+Simple yellow-to-red linear gradient background
+```css
+background: linear-gradient(yellow, red);
+```
+Change sides?, just add `to right`
+```css
+background: linear-gradient(to right, orange, red);
+```
+Fade to corners
+```css
+background: linear-gradient(to bottom right, orange, red);
+```
+Fade more colors (just add them)
+```css
+background: linear-gradient(yellow, red, blue);
+```
+
+#### Radial gradients
+They are one fading from central point to "outside"
+```css
+background: radial-gradient(yellow, green);
+```
+You can specify the shape of the fade (default is ellipse)
+```css
+background: radial-gradient(circle, yellow, green);
+```
+
+#### Repeating gradients
+This will make box colored like black-and-white bars
+```css
+background: repeating-linear-gradient(white, black 15px, white 30px);
+```
+This one is circular  (like darts bord)
+```css
+background: repeating-radial-gradient(black, black 15px, white 15px, white 30px);
+```
+
+
+
+
 
 ---
 ### Text<a name="Text"></a>
@@ -442,6 +486,97 @@ The `position` property is used to define whether a box is absolute, relative, s
     */
 }
 ```
+
+#### Backgrounds
+`CSS3 allows you to apply multiple background images to a single box`
+```css
+background-image: url(this.jpg), url(that.gif), url(theother.png);
+```
+
+#### Background size
+**background-size** propery allows you to stretch or compress a background img
+Values:
+
+* `auto` - leave image's original size and w/h ratio 
+* `percentages`- a width and a height, such as 50% 25%
+* `contain`- maintains the background image’s original ratio and makes it as large as possible 
+whilst fitting entirely within the box’s background area.
+* `cover`- maintains the background image’s original ratio and makes it large enough to fill 
+the entire background area, which may result in cropping of either the height or width
+
+#### Transformations
+Need to rotate,skew,scale or translate a box and its content? 
+[See this link](#http://www.htmldog.com/references/css/properties/transform/)
+
+
+---
+### Media queries<a name="Media"></a>
+`@media` at-rules, used to target styles at specific media, such as screen or print
+```css
+@media screen and (max-width: 1000px) {
+    #content { width: 100% }
+}
+```
+More examples
+```css
+@media screen and (max-width: 1000px) {
+    #content { width: 100% }
+}
+@media screen and (max-width: 800px) {
+    #nav { float: none }
+}
+@media screen and (max-width: 600px) {
+    #content aside {
+        float: none;
+        display: block;
+    }
+}
+```
+#### Orientation-specific CSS
+This is especially usefull with mobile devices
+```css
+@media screen and (orientation: landscape) {
+    #nav { float: left }
+}
+@media screen and (orientation: portrait) {
+    #nav { float: none }
+}
+```
+
+#### Width and height specific CSS
+Usefull for nav bars ( if screen is too small rearrange items )
+```css
+@media screen and (min-device-height: 768px) and (max-device-width: 1024px) {
+    /* Apply this if height is bigger that 768px and width than 1024px*/
+}
+```
+Be carefull of pixel ratios 
+[see this](#https://stackoverflow.com/questions/8785643/what-exactly-is-device-pixel-ratio)
+
+
+---
+### Transitions<a name="Transitions"></a>
+```
+Transitions allow you to easily animate parts of your 
+design without the need for the likes of JavaScript
+```
+you can use `transition` property, it has following properties:
+* `transition-property` - which property (or properties) will transition.
+* `transition-duration` - how long the transition takes.
+* `transition-timing-function` -  if the transition takes place at a constant speed or if it 
+accelerates and decelerates
+* `transition-delay` - how long to wait until the transition takes place.
+
+```css
+a:link {
+    transition: all .5s linear 0;
+    color: hsl(36,50%,50%);
+}
+a:hover {
+    color: hsl(36,100%,50%);
+}
+```
+
 
 ---
 ### Random notes<a name="Random"></a>

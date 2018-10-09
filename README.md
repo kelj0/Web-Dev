@@ -8,7 +8,7 @@
 
 ## Reading checklist
 
-
+### Other
 - [x] - https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f
 - [x] - https://github.com/alex/what-happens-when#what-happens-when
 - [x] - https://interactivepython.org/runestone/static/webfundamentals/WWW/technology.html
@@ -23,11 +23,12 @@
 - [x] - http://www.htmldog.com/guides/html/beginner/
 - [x] - http://www.htmldog.com/guides/html/intermediate/
 - [x] - http://www.htmldog.com/guides/html/advanced/
+- [ ] - HTML and CSS design and build websites by Jon Duckett(~500 pages)
 
 ### CSS
 - [x] - http://www.htmldog.com/guides/css/beginner/
 - [x] - http://www.htmldog.com/guides/css/intermediate/
-- [-] - http://www.htmldog.com/guides/css/advanced/
+- [x] - http://www.htmldog.com/guides/css/advanced/
 
 ### JS
 - [ ] - http://www.htmldog.com/guides/javascript/beginner/
