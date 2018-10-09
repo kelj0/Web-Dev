@@ -157,6 +157,17 @@ h1{
 ```
 Speaks for it self
 
+#### Text shadow
+```css
+text-shadow: -2px 2px 2px #999;
+```
+* The first value is the horizontal offset
+* The second value is the vertical offset
+* The third value is the blur radius (optional)
+* The fourth value is the color
+
+
+
 ### Margins, padding and borders<a name="Margins"></a>
 
 #### Margins
@@ -182,6 +193,34 @@ h2{
     border-color: red
 }
 ```
+
+#### Box Shadows
+```css
+#test {
+    box-shadow: 5px 5px 3px 1px #999
+}
+```
+```
+The first value is the horizontal offset — how far the shadow is nudged to the right (or 
+    left if it’s negative)
+
+The second value is the vertical offset — how far the shadow is nudged downwards (or 
+    upwards if it’s negative)
+
+The third value is the blur radius — the higher the value the less sharp the shadow. (“0” 
+    being absolutely sharp). This is optional — omitting it is equivalent of setting “0”.
+
+The fourth value is the spread distance — the higher the value, the larger the 
+    shadow (“0”  being the inherited size of the box). This is also optional -
+    omitting it is equivalent of setting “0”.
+
+The fifth value is a color. That’s optional, too.
+```
+**Inner shadows**: just add `inset`
+```css
+box-shadow: inset 0 0 7px 5px #999;
+```
+
 
 ---
 ### Class and ID Selectors<a name="Class"></a>
@@ -236,6 +275,50 @@ This removes the need for classes or IDs on the `p` and `h1` tags
     <p>Paragr</p>
 </div>
 ```
+
+#### Child selectors
+**greater-than** (“>”) can be used to specify something that is a child of something else
+```html
+<ul id="test">
+    <li>Layer1
+        <ul>
+            <li>Layer2</li>
+        </ul>
+    </li>
+    <li>Layer One
+        <ul>
+            <li>Layer Two</li>
+        </ul>
+    </li>
+</ul>
+```
+now to **apply style** to **Layer1 and Layer One** but **not** to **Layer2 and Layer Two**
+use following CSS
+```css
+#test > li { border: 1px solid red }
+```
+
+#### Adjecent selectors
+**use + sign** to target an adjecent sibling of an element(something **immediately following**)
+```html
+<h1>Heading</h1>
+<p>Targeted paragraph</p>
+<p>Didnt get styles :(</p>
+```
+```css
+h1 + p { font-weight: bold }
+```
+
+#### Attribute selectors
+```css
+abbr[title] { border-bottom: 1px dotted #ccc }
+```
+Translate as- put dotted line underneath all **abbreviations** with a `title` attribute
+```css
+input[type=text] { width: 200px; }
+```
+Translate as- apply a width of 200px only to `input` elements that are specified as text boxes
+
 
 ---
 ### Pseudo classes<a name="Pseudo"></a>

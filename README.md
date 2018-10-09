@@ -22,12 +22,12 @@
 ### HTML
 - [x] - http://www.htmldog.com/guides/html/beginner/
 - [x] - http://www.htmldog.com/guides/html/intermediate/
-- [ ] - http://www.htmldog.com/guides/html/advanced/
+- [x] - http://www.htmldog.com/guides/html/advanced/
 
 ### CSS
 - [x] - http://www.htmldog.com/guides/css/beginner/
 - [x] - http://www.htmldog.com/guides/css/intermediate/
-- [ ] - http://www.htmldog.com/guides/css/advanced/
+- [-] - http://www.htmldog.com/guides/css/advanced/
 
 ### JS
 - [ ] - http://www.htmldog.com/guides/javascript/beginner/

@@ -11,6 +11,7 @@
 -    [Forms](#Forms)
 -    [Text](#Text)
 -    [Meta](#Meta)
+-    [Video, Audio, Canvas](#Video)
 ---
 
 ### Tags<a name="Tags"></a>
@@ -149,7 +150,7 @@ Open links in **new tab**
 
 Display image from **link**
 ```html
-<img src="http://www.urltoimage.jpg" width="100" height="100" alt="Alternative description">
+<img src="http://www.urltoimage.jpg",width="100",height="100",alt="Alternative description">
 ```
 **width** and **height** are necessary because if they are excluded, the browser will tend to calculate the size as the image
 loads, instead of when the page loads, which means that the layout of the document may jump around while the page is loading
@@ -189,6 +190,74 @@ This table doesnt have borders! To have borders add **border** to `<table>` (`<t
     </tr>
 </table>
 ```
+#### Colgroup
+```html
+<table>
+    <colgroup>
+        <col class="test">
+        <col style="background-color:tomato">
+    </colgroup>
+        <tr>
+            <td>I got styles like class "test"</td>
+            <td>IM RED</td>
+        </tr>
+        <tr>
+            <td>I got styles like class "test"</td>
+            <td>IM RED</td>
+        </tr>
+</table>
+```
+```
+You can also use the span attribute in a similar way
+to rowspan and colspan. Using it with the colgroup tag
+will define the number of rows that the column group will belong to
+```
+```html
+<colgroup>
+    <col span="2" class="test">
+    <col style="background-color:tomato">
+</colgroup>
+    <tr>
+        <td>I got styles like class 'test'</td>
+        <td>I have styles like class 'test' cause span="2"</td>
+    </tr>
+    <tr>
+        <td>I got styles like class 'test'</td>
+        <td>IM RED</td>
+    </tr>
+```
+
+#### Caption
+```html
+<caption>This is table caption</caption>
+<!--
+    Appears above the table by default..
+    Use caption-side: bottom to well do what is says
+-->
+```
+
+#### Headers and Footers
+`thead`, `tfoot` and `tbody` allow you to separate the table into **header**,**footer**
+and **body** . It might come in handy when dealing with larger tables
+```html
+<thead>
+    <tr>
+        <td>Header 1</td>
+    </tr>
+</thead>
+<tfoot>
+    <tr>
+        <td>Footer 1</td>
+    </tr>
+</tfoot>
+<tbody>
+    <tr>
+        <td>Cell 1</td>
+    </tr>
+</tbody>
+```
+
+
 
 ---
 ### Forms<a name="Forms"></a>
@@ -230,6 +299,34 @@ rows and cols
 When the form is **submitted**, the value of selected option will be sent. This **value will be the text between the selected**
 **opening and closing option tag unless** an explicit value is specified with the `value` **attribute**
 
+#### Option groups
+
+`optgroup` groups option in select box. It **requires** a `label` attribute, the value which
+is displayed as a non-selectable pseudo-heading preceding group in drop-down list
+```html
+<select name="country">
+    <optgroup label="Africa">
+        <option value="gam">Gambia</option>
+        <option value="nam">Namibia</option>
+    </optgroup>
+    <optgroup label="Europe">
+        <option value="fra">France</option>
+        <option value="uk">UK</option>
+    </optgroup>
+</select>
+```
+
+#### Data lists
+**suggestions** that accompanies a text field
+```html
+<input name="country" list="country_name">
+<datalist id="country_name">
+    <option value="Afghanistan">
+    <option value="Albania">
+    <option value="Algeria">
+</datalist>
+```
+
 #### Names
 ```html
 <form action="test.py" method="post">
@@ -237,6 +334,54 @@ When the form is **submitted**, the value of selected option will be sent. This 
 </form>
 ```
 This makes form handleable by script (now you can easier extract post request)
+
+#### Field sets and legends
+You can group fields for example name(first,last) and address(country,town) using `fieldset`
+```html
+<fieldset>
+    <legend>Name</legend>
+    <p>First name <input name="firstName"></p>
+    <p>Last name <input name="lastName"></p>
+</fieldset>
+<fieldset>
+    <legend>Address</legend>
+    <p>Country <input name="country"></p>
+    <p>Town <input name="town"></p>
+</fieldset>
+```
+**Note:**
+```
+Most browsers tend to represent field sets with a border surrounding them and the legend caption breaking the left of the top border by default. You can, of course, change this with CSS if you wish.
+```
+
+#### Numbers and Ranges (html5)
+```html
+<input type="number" name="quantity" step="2" min="20" max="30">
+```
+`It must be >20 , <30 and multiple of 2`
+```html
+<input type="range" name="temperature" min="15" max="25" step="0.5" value="18.5">
+```
+Horizontal bar with a slider in the middle of it
+
+#### Dates and times(html5)
+* type="datetime"
+* type="date"
+* type="month"
+* type="week"
+* type="time"
+* type="datetime-local"
+```
+step,min and max attributes can be used with dates and times too as 
+can the CSS pseudo classes to style according to validity
+```
+
+#### Color (html5)
+```html
+<input name="color" type="color" value="#ff8800">
+```
+
+
 
 ---
 ### Text<a name="Text"></a>
@@ -402,6 +547,29 @@ pull-quotes or snippets of related information in an article:
 </nav>
 ```
 
+#### Date and time
+```html
+<p>Date: <time datetime="2018-10-09">Tuesday 9th October</time></p>
+<p>Time: <time datetime="9:30">Half 10</time></p>
+<p>Date and time: <time>2018-10-09 9:30</time></p>
+```
+If the textual content of the `time` element is already machine readable, you don’t need the
+`datetime` attribute but it is required if it isn’t.
+
+#### Mark
+Same as highlighting text with a marker pen
+```html
+<p>My name is <mark>yellow</mark></p>
+```
+
+#### Conditional comments
+```html
+<link href="nice.css" rel="stylesheet">
+<!--[if IE]><link href="pls.css" rel="stylesheet"><![endif]-->
+```
+Everything between `<!--[if IE]>` and `<[endif]-->` will be picked up by Internet Explorer
+
+
 ---
 ### Meta tags<a name="Meta"></a>
 
@@ -423,4 +591,63 @@ should rarely be used but the value can be:
   <!--refresh is not great for accessibility -->
   <meta name="description" content="This is used by search engines to display desc of web page in results">
 </head>
+```
+
+---
+### Video, Audio, Canvas<a name="Video"></a>
+```html
+<video src="video.mp4" controls></video>
+```
+This will embed a video, complete with controls in browsers that support **HTML5** video tag
+```html
+<video src="video.mp4" autoplay></video>
+```
+This autoplays video on page load, without controls (like ad)
+
+Other basic attributes:
+* `width`
+* `height`
+* `loop`
+* `muted`
+
+#### placeholder image
+image before video plays (it will shrink/stretch to fit video dimensions)
+```html
+<video src="video.mp4" poster="image.jpg" controls></video>
+```
+
+**fall-back content** inside `video` tags, its displayed if browser doesn't understand the 
+`video` element
+```html
+<video src="video.mp4" controls>
+    <img src="notWorking.jpg" alt="Video is not working">
+</video>
+```
+
+#### Alternative content
+```html
+ <video controls>
+    <source src="video1.mp4" type="video/mp4; codecs='avc1, mp4a'">
+    <source src="video2.webm" type="video/webm; codecs='vp8.0, vorbis'">
+    <p>Browser no likey HTML 5.</p>
+</video>
+```
+
+#### Audio
+```html
+<audio src="zlaja.mp3" controls>
+    Your stupid browser doesn't support HTML 5 audio.
+</audio>
+```
+
+#### Canvas
+```
+It is designed to provide a canvas onto which JavaScript 
+can be used to paint all manner of dynamic images such
+as graphs, animated sprites..
+```
+```html
+<canvas id="test" width="800" height="450">
+    <!-- Fall-back content here, just like with video and audio -->
+</canvas>
 ```
