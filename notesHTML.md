@@ -149,7 +149,7 @@ Open links in **new tab**
 
 Display image from **link**
 ```html
-<img src="http://www.urltoimage.jpg",width="100",height="100",alt="Alternative description">
+<img src="http://www.urltoimage.jpg" width="100" height="100" alt="Alternative description">
 ```
 **width** and **height** are necessary because if they are excluded, the browser will tend to calculate the size as the image
 loads, instead of when the page loads, which means that the layout of the document may jump around while the page is loading
