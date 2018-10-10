@@ -147,6 +147,25 @@ Open links in **new tab**
 ```
 ---
 ### Images<a name="Images"></a>
+**Important read this first**
+```
+Remember that all images are subject to copyright, and you can get in trouble 
+for simply taking photographs from another website. Here is a short list of
+companies who sell stock images
+```
+* www.istockphoto.com
+* www.gettyimages.com
+* www.veer.com
+* www.sxc.hu
+* www.fotolia.com
+
+```
+Where an image is placed in the code will affect how it is displayed
+here are 3 examples of image placement
+```
+* `Before a paragraph`- The paragraph starts on a new line after the image
+* `Inside the start of a paragraph`- The first row of text aligns with the bottom of the image
+* `In the middle of a paragraph`- The image is placed between the words of the paragraph that it appears in
 
 Display image from **link**
 ```html
@@ -156,6 +175,16 @@ Display image from **link**
 loads, instead of when the page loads, which means that the layout of the document may jump around while the page is loading
 
 **alt** is providing meaningful information to users who are unable to see the image
+
+#### figure (HTML5)
+```html
+<figure>
+<img src="img.jpg" alt="This is img">
+<br />
+<figcaption>This is bellow image</figcaption>
+</figure>
+```
+
 
 ### Tables<a name="Tables"></a>
 ```html
@@ -381,8 +410,6 @@ can the CSS pseudo classes to style according to validity
 <input name="color" type="color" value="#ff8800">
 ```
 
-
-
 ---
 ### Text<a name="Text"></a>
 
@@ -415,6 +442,13 @@ Paragraph 2
 <p>This is a <abbr title="Abbreviation">abb</abbr></p>
 ```
 Basically when you hower abb with mouse, that small box would appear with text "Abbreviation" in it 
+
+#### Superscript & subscript
+```html
+<p> 2<sup>2</sup> is 4</p>
+<p> H<sub>2</sub>O</p>
+```
+
 
 #### Quotations
 ```
