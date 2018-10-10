@@ -185,7 +185,7 @@ loads, instead of when the page loads, which means that the layout of the docume
 </figure>
 ```
 
-
+---
 ### Tables<a name="Tables"></a>
 ```html
 <table>
