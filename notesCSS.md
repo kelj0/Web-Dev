@@ -123,13 +123,21 @@ This one is circular  (like darts bord)
 ```css
 background: repeating-radial-gradient(black, black 15px, white 15px, white 30px);
 ```
-
-
-
+#### Opacity (css3)
+Allow you to specify the opacity of an element. Value is number **between 0.0 and 1.0** (0.5==50% opacity)
+```css
+p.one{
+    background-color: rgb(0,0,0);
+    opacity: 0.5;
+}
+```
 
 
 ---
 ### Text<a name="Text"></a>
+
+#### Font family
+
 ```css
 h1{
     font-family: "Times New Roman";
@@ -143,10 +151,39 @@ h1{
 ```
 This tells browser to first try to find Courier New, then Courier and then monospace
 
+You can also use font that is not installed on the computer of person browsing
+```css
+@font-face {
+    font-faimily: 'MyFont';
+    src: url('path/to/font/MyFont.eot');
+}
+h1,h2{
+    font-family: MyFont,Geo
+}
+```
+**Warning: because user downloads font it is important that the license for the font permits it to be used in this way**
+
+Different browsers support different formats for fonts so you need to supply the font in several variations. 
+The various font formats should appear in your code in this order:
+1. eot
+2. woff
+3. ttf/otf
+4. svg
+
+If you dont have all of there formats for your font you can upload font to a website and it will convert
+it for you [link](www.fontsquirrel.com/fontface/generator)
+
+
 #### Font size
 ```css
 h1{
     font-size: 100px;
+}
+h2{
+    font-size: 200%;
+}
+h3{
+    font-size: 1.3em;
 }
 ```
 #### Font weight
@@ -155,7 +192,7 @@ h1{
     font-weight: bold
 }
 ```
-Font weight states whether the thext is bold or not
+Font weight states whether the text is bold or not
 
 Most commonly used are 
 * bold

@@ -14,6 +14,9 @@
 - [x] - https://interactivepython.org/runestone/static/webfundamentals/WWW/technology.html
 - [x] - https://interactivepython.org/runestone/static/webfundamentals/WWW/intro.html
 - [x] - https://github.com/vasanthk/how-web-works#how-web-works
+- [ ] - https://www.w3schools.com/bootstrap4/
+- [ ] - https://getbootstrap.com/docs/4.1/getting-started/introduction/#starter-template
+
 
 ### Markdown
 
@@ -25,10 +28,15 @@
 - [x] - http://www.htmldog.com/guides/html/advanced/
 - [ ] - HTML and CSS design and build websites by Jon Duckett(~500 pages)
 
+
 ### CSS
 - [x] - http://www.htmldog.com/guides/css/beginner/
 - [x] - http://www.htmldog.com/guides/css/intermediate/
 - [x] - http://www.htmldog.com/guides/css/advanced/
+- [ ] - https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf
+- [ ] - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+- [ ] - https://css-tricks.com/things-ive-learned-css-grid-layout/
+- [ ] - https://css-tricks.com/snippets/css/complete-guide-grid/
 
 ### JS
 - [ ] - http://www.htmldog.com/guides/javascript/beginner/
@@ -38,3 +46,6 @@
 
 ### Projects
 - [x] - Copy of google static page [link](https://github.com/kkeglje/Web-Dev/blob/master/Small_Projects/googleCopy)
+- [ ] - [Download](http://www.csszengarden.com/) a HTML file and make css for it 
+- [ ] - Recreate [this](http://jthemes.org/demo-admin/minton/)
+
