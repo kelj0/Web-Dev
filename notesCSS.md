@@ -18,6 +18,7 @@ presentation of that document
 -    [Page Layout](#Page)
 -    [Media Queries](#Media)
 -    [Transitions](#Transitions)
+-    [Lists](#Lists)
 -    [Random Notes](#Random)
 ---
 
@@ -545,6 +546,37 @@ the entire background area, which may result in cropping of either the height or
 Need to rotate,skew,scale or translate a box and its content? 
 [See this link](#http://www.htmldog.com/references/css/properties/transform/)
 
+#### Floating elements
+```css
+h1{
+float: right;
+}
+```
+#### Multi-column layout with float
+
+```html
+<div class="column1of2">
+    <h3>COLUMN 1</h3>
+</div>
+<div class="column2of2">
+    <h3>COLUMN 2</h3>
+</div>
+```
+
+```css
+.column1of2 {
+float: left;
+width: 620px;
+margin: 10px;
+}
+.column2of2 {
+float: left;
+width: 300px;
+margin: 10px;
+}
+```
+
+
 
 ---
 ### Media queries<a name="Media"></a>
@@ -612,6 +644,32 @@ a:link {
 a:hover {
     color: hsl(36,100%,50%);
 }
+```
+
+---
+### Lists<a name="Lists"></a>
+```css
+ul{
+    list-style-image: url("images/star.png");
+ }
+```
+This changes bullets to stars (or any other picture you want)
+```css
+ul.illuminations{
+    list-style-position: outside;
+    }
+ul.season{
+    list-style-position: inside;;
+    }
+```
+* outside - puts dot outside of text
+* inside - puts dot inside of text see below
+```
+* this is
+  outside
+  
+* this is
+inside
 ```
 
 
