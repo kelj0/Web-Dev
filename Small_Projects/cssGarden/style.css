@@ -1,0 +1,274 @@
+body{
+    color: #555753;
+}
+
+.page-wrapper{
+    background-color: #134347;
+}
+
+.intro header{
+    color:white;
+    background: url(images/huntington.jpg) no-repeat top left;
+    padding: 4% 0 4% 0 ;
+    background-color: #134347;
+}
+/*-------global links--------*/
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    transition: all 0.20s ease-in-out;
+    border-radius: 20px;
+    border: 4px dotted red;
+}
+/*-----main header--------*/
+header h1{
+    font-weight: 100;
+    margin-left: 20%;
+    margin-bottom: 0;
+    font-size: 64px;
+}
+
+header h2{
+    font-weight: 200;
+    font-size: 32px;
+    margin-top: 0%;
+    margin-left: 20%;
+}
+
+.summary a{
+    color: #555753;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: url('images/download.png') left no-repeat;
+    text-align: center;
+    padding: 5px 10px 5px 20px;
+}
+
+.summary a:hover{
+    color: white;
+    background-color: #0086b3;
+    text-decoration: none;
+    transition: all 0.25s ease-in;
+    padding: 5px 10px 5px 20px;
+}
+
+#zen-supporting{
+    max-width: 55%;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 5%;
+    float: left;
+    background-color: white;
+}
+
+.summary{
+    max-width: 60%;
+    font-size: 20px;
+    line-height: 1.6;
+    float: left;
+    background-color: white;
+    padding-left: 5%;
+
+}
+
+.preamble{
+    float: left;
+    max-width: 60%;
+    font-size: 20px;
+    line-height: 1.6;
+    background-color: white;
+    padding-left: 5%;
+}
+
+
+/*-------------button-------------*/
+.design-archives{
+    position: absolute;
+    opacity: 0.4;
+    font-weight: 500;
+    top: 50px;
+    right:100px;
+    list-style-type: none;
+}
+
+.design-archives a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);;
+    font-weight: 900;
+}
+.design-archives a:hover{
+    text-decoration: none;
+    transition: none;
+    border: none;
+
+}
+.design-archives li{
+    display: inline-block;
+    margin: 0px 0.1px;
+}
+
+.design-archives nav ul li.viewall{
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 30px 15px 20px 10px;
+    color:rgba(255, 255, 255, 1);
+    text-align: center;
+    font-size: 32px;
+}
+.design-archives .next{
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 64px;
+    text-align: center;
+    width: 60px;
+    height: 88px; 
+}
+
+.design-archives nav ul li.viewall:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color:rgba(255, 255, 255, 1);
+}
+
+.design-archives .next:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/*-------------right menu-------------*/
+.design-selection ul{
+    list-style: none;
+    margin-top: 0;
+    padding-top: 10%;
+    padding-left: 30%;
+}
+
+.design-selection nav{
+    background-color: #d1d6d6;
+    margin-left: 60%;
+    height: 100%;
+    padding: 0px 10px;
+    text-align: left;
+}
+
+.design-selection ul li{
+    padding-inline-start: 10px;
+}
+
+.design-selection h3{
+    display: none;
+}
+
+.design-selection .design-name{
+    font-size: 24px;
+    font-weight: 100;
+    color: #607476;
+    text-transform: uppercase;
+}
+.design-selection .design-name::after{
+    content: "\A";
+    white-space: pre;
+}
+
+.design-selection .design-name:hover{
+    color: #1a5952;
+}
+
+.design-selection .designer-name:hover{
+    color: #0086b3;
+}
+
+.design-selection a{
+    line-height: 50px;
+    list-style-type: none;
+    text-align: left;
+    color: #555753;
+    text-decoration: none;
+}
+
+/*-------------right menu(second [yellow one])-------------*/
+.zen-resources{
+    background-color: #55b38c;
+    height: 100%;
+    padding: 50px 80px;
+    text-align: left;
+}
+.zen-resources h3{
+    display: none;
+}
+.zen-resources li{
+    list-style: none;
+    padding-top: 50px;
+}
+.zen-resources a{
+    text-decoration: none;
+}
+
+.zen-resources ul li a:hover{
+    transition: all 0.15s ease-in;
+    border: 20px solid rgb(151, 243, 13);
+    background-color: #215c43;
+    color:rgb(235, 72, 72);
+    margin-left: 10px;
+    border-radius: 20px;
+}
+.zen-resources ul li a{
+    color: black;
+    border: 10px solid greenyellow;
+    background-color: #55b38c;
+    border-radius: 1px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.participation{
+    background-color: rgba(118, 199, 70, 0.6);
+    font-size: 20px;
+    margin-left: -10%;
+    padding-left: 10%;
+    clear: both;
+}
+.benefits{
+    background-color: rgba(118, 199, 70, 0.6);
+    font-size: 20px;
+    margin-top: -24px;
+    margin-left: -10%;
+    padding-left: 10%;
+    clear: both;
+}
+p[role=contentinfo]{
+    background-color: #358d6a;
+    margin-left: -10%;
+    padding:10% 0% 10% 10%;
+    font-size: 30px;
+}
+
+/*------- By Dave Shea. Bandwith...---------*/
+p[role=contentinfo] a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;    
+}
+
+
+p[role=contentinfo] a:hover{
+    transition: all 0.20s ease-in-out;
+    border-radius: 20px;
+    border: 5px dotted red;
+}
+/*------------html css cc ally gh ------------ */
+footer{
+    clear: both;
+    background-color: #134347;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    border: 5px solid rgb(43, 167, 74);
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    color: black;
+}
+footer a:hover{
+    padding:2%;
+    transition: all 0.20s ease-in-out;
+    border: 20px solid rgb(1, 255, 64);
+}

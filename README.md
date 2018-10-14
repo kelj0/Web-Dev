@@ -26,14 +26,14 @@
 - [x] - http://www.htmldog.com/guides/html/beginner/
 - [x] - http://www.htmldog.com/guides/html/intermediate/
 - [x] - http://www.htmldog.com/guides/html/advanced/
-- [ ] - HTML and CSS design and build websites by Jon Duckett(~500 pages)
+- [x] - HTML and CSS design and build websites by Jon Duckett(~500 pages)
 
 
 ### CSS
 - [x] - http://www.htmldog.com/guides/css/beginner/
 - [x] - http://www.htmldog.com/guides/css/intermediate/
 - [x] - http://www.htmldog.com/guides/css/advanced/
-- [ ] - https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf
+- [x] - https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf
 - [ ] - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 - [ ] - https://css-tricks.com/things-ive-learned-css-grid-layout/
 - [ ] - https://css-tricks.com/snippets/css/complete-guide-grid/
@@ -45,7 +45,7 @@
 - [ ] - https://eloquentjavascript.net/
 
 ### Projects
-- [x] - Copy of google static page [link](https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/googleCopy)
-- [ ] - [Download](http://www.csszengarden.com/) a HTML file and make css for it 
+- [x] - Copy of google static page [done](https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/googleCopy)
+- [x] - [Download](http://www.csszengarden.com/) a HTML file and make css for it [done]((https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/cssGarden)
 - [ ] - Recreate [this](http://jthemes.org/demo-admin/minton/)
 
