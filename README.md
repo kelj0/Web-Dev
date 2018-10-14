@@ -1,9 +1,9 @@
 ### Notes:
 
--	[HTML](https://github.com/kkeglje/Web-Dev/blob/master/notesHTML.md)
--	[CSS](https://github.com/kkeglje/Web-Dev/blob/master/notesCSS.md)
--	[JS](https://github.com/kkeglje/Web-Dev/blob/master/notesJS.md)
--	[MD](https://github.com/kkeglje/Web-Dev/blob/master/notesMD.md)
+-	[HTML](https://github.com/kelj0/Web-Dev/blob/master/notesHTML.md)
+-	[CSS](https://github.com/kelj0/Web-Dev/blob/master/notesCSS.md)
+-	[JS](https://github.com/kelj0/Web-Dev/blob/master/notesJS.md)
+-	[MD](https://github.com/kelj0/Web-Dev/blob/master/notesMD.md)
 
 
 ## Reading checklist
@@ -45,7 +45,7 @@
 - [ ] - https://eloquentjavascript.net/
 
 ### Projects
-- [x] - Copy of google static page [link](https://github.com/kkeglje/Web-Dev/blob/master/Small_Projects/googleCopy)
+- [x] - Copy of google static page [link](https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/googleCopy)
 - [ ] - [Download](http://www.csszengarden.com/) a HTML file and make css for it 
 - [ ] - Recreate [this](http://jthemes.org/demo-admin/minton/)
 
