@@ -45,7 +45,7 @@
 - [ ] - https://eloquentjavascript.net/
 
 ### Projects
-- [x] - Copy of google static page [done](https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/googleCopy)
-- [x] - [Download](http://www.csszengarden.com/) a HTML file and make css for it [done]((https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/cssGarden)
+- [x] - Copy of google static page [[done](https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/googleCopy)]
+- [x] - [Download](http://www.csszengarden.com/) a HTML file and make css for it [[done](https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/cssGarden)]
 - [ ] - Recreate [this](http://jthemes.org/demo-admin/minton/)
 
