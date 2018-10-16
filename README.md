@@ -14,8 +14,8 @@
 - [x] - https://interactivepython.org/runestone/static/webfundamentals/WWW/technology.html
 - [x] - https://interactivepython.org/runestone/static/webfundamentals/WWW/intro.html
 - [x] - https://github.com/vasanthk/how-web-works#how-web-works
-- [ ] - https://www.w3schools.com/bootstrap4/
-- [ ] - https://getbootstrap.com/docs/4.1/getting-started/introduction/#starter-template
+- [x] - https://www.w3schools.com/bootstrap4/
+- [x] - https://getbootstrap.com/docs/4.1/getting-started/introduction/#starter-template
 
 
 ### Markdown
@@ -34,9 +34,9 @@
 - [x] - http://www.htmldog.com/guides/css/intermediate/
 - [x] - http://www.htmldog.com/guides/css/advanced/
 - [x] - https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf
-- [ ] - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-- [ ] - https://css-tricks.com/things-ive-learned-css-grid-layout/
-- [ ] - https://css-tricks.com/snippets/css/complete-guide-grid/
+- [x] - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+- [x] - https://css-tricks.com/things-ive-learned-css-grid-layout/
+- [x] - https://css-tricks.com/snippets/css/complete-guide-grid/
 
 ### JS
 - [ ] - http://www.htmldog.com/guides/javascript/beginner/
