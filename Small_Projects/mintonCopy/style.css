@@ -1,0 +1,24 @@
+#main-wrapper{
+    background-color: rgb(236, 239, 240);
+}
+
+.sidebar ul{
+    text-decoration: none;
+    color: gray;
+    position: sticky;
+    font-weight: bold;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: gray;
+    
+}
+.sidebar a:hover{
+    text-decoration: none;
+    color: rgb(46, 70, 209);
+}
+
+.sidebar ul li:hover{
+    color: rgb(46, 70, 209);
+}
