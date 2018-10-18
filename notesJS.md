@@ -171,7 +171,7 @@ console.log(half(5));
 ```
 
 ---
-#### Data structures<a name="#Data"></a>
+#### Data structures<a name="Data"></a>
 
 **Lists**
 ```js
