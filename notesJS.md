@@ -7,7 +7,7 @@
 -	[Conditional statements](#Conditional)
 -	[Loops](#Loops)
 -	[Functions](#Functions)
--	[Data Structures])(#Data)
+-	[Data Structures](#Data)
 ---
 
 #### Hello world<a name="Hello"></a>
