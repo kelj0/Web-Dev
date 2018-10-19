@@ -100,6 +100,15 @@ for(let number = 0 ; number <= 12; number = number+2) {
 // 0
 // 2
 // ..
+
+
+for(let i of [1,2,3])
+	console.log(i);
+// 1
+// 2
+// 3
+// this is like "for i in [1,2,3,4]" in python
+
 ```
 
 **Breaking** out of loop
@@ -130,6 +139,23 @@ function square(x){
 console.log(square(4));
 // 16
 ```
+**"Inline"**
+```js
+n => n<0;
+// use ? 
+function onlyPositive(array,test){
+	for(let n of array){
+		if(test(n))
+			return false;
+	}
+	return true;
+}
+console.log(onlyPositive([1,2,3,4],n=>n<0));
+// true
+console.log(onlyPositive([1,2,3,-2],n=>n<0));
+// false
+```
+
 
 **Optional arguments**
 ```js
@@ -189,12 +215,6 @@ console.log(sequence.pop());
 console.log(sequence);
 // [1, 2, 3, 4]
 
-/*-----------
- Array loops
-*/
-for(let i of [1,2,3,4])
-	console.log(entry);
-// this is like "for i in [1,2,3,4]" in python
 
 /*-----------
  Slicing
