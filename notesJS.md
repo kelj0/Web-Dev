@@ -215,6 +215,21 @@ console.log(sequence.pop());
 console.log(sequence);
 // [1, 2, 3, 4]
 
+/*-----------
+ Includes
+*/
+[1, 2, 3].includes(2);    // true
+[1, 2, 3].includes(4);    // false
+[1, 2, 3].includes(3, 3); // false
+
+/*-----------
+ Remove particular element from list
+*/
+var array = [1,2,3];
+var index = array.indexOf(2);
+if (index>-1)
+	array.splice(index,1);
+
 
 /*-----------
  Slicing
@@ -392,6 +407,77 @@ blackRabbit.speak("u");
 killerRabbit.speak("hm");
 // The killer rabbit says 'hm'
 ```
+**static**
+```js
+class Temperature {
+  constructor(celsius) {
+    this.celsius = celsius;
+  }
+  get fahrenheit() {
+    return this.celsius * 1.8 + 32;
+  }
+  set fahrenheit(value) {
+    this.celsius = (value - 32) / 1.8;
+  }
+  static fromFahrenheit(value) {
+    return new Temperature((value - 32) / 1.8);
+  }
+}
+console.log(Temperature.fromFahrenheit(86))  // note i didnt make new class, i rather used 
+// 30                                           static method
+let temp = new Temperature(22);
+console.log(temp.fahrenheit);
+// 71.6
+temp.fahrenheit = 86;
+console.log(temp.celsius);
+// 30
+```
+**Inheritance**
+```js
+class Human{
+	constructor(money,powers="no"){ // optional arg powers
+        this.money = money;
+        console.log(`You created class with ${money}$`)
+    }
+    fly(){
+    	console.log("I cant fly");
+    }
+}
+
+class Superhero extends Human{ //inherits from human
+    fly(){     // polymorphism
+ 	   console.log("GVGGGGGGG");
+    }
+}
+
+let h = new Human(10);
+// You creaded class with 10$
+let s = new Superhero(99999,"daje brutalne bese");
+// You created class with 99999$
+
+h.fly();
+// I cant fly
+s.fly();
+// GVGGGGGGG
+
+```
+
+**toString**
+```js
+/* ---------------------
+When you call the String function (which converts a value to a string) 
+on an object, it will call the toString method on that object to try to 
+create a meaningful string from it. 
+------------------------*/
+
+Rabbit.prototype.toString = function(){
+	return `a ${this.type} rabbit`;
+}
+console.log(String(blackRabbit));
+// a black rabbit
+```
+
+
 **Maps**
 ```js
 let ages = {
@@ -436,4 +522,5 @@ Key(kk)->Value(33)
 Key(rr)->Value(44)
 Key(ss)->Value(55)
 */
+
 ```
