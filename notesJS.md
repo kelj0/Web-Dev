@@ -490,7 +490,7 @@ console.log("Is kk age known?", "kk" in ages);
 console.log("Is toString's age known?", "toString" in ages);
 // Is toString's age known? true
 
-============================
+//============================
 function protoRabbit(){
  console.log("Rabbit created"); 
 }
