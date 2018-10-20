@@ -15,21 +15,21 @@
 ```js
 console.log("Hello world!");
 ```
-
+---
 ---
 ### Variables<a name="Variables"></a>
 ```js
 let hello = "Hello world!";
 console.log(hello);
 ```
-
+---
 ---
 ### Input<a name="Input"></a>
 ```js
 let word = prompt("Write something and il print it");
 console.log(word);
 ```
-
+---
 ---
 ### Conditional statements<a name="Conditional"></a>
 ```js
@@ -68,6 +68,7 @@ switch (prompt("What is the weather like?")) {
 }
 ```
 
+---
 ---
 ### Loops<a name="Loops"></a>
 **while**
@@ -121,6 +122,7 @@ for(let number = 0; number<=12;number=number+1){
 }
 ```
 
+---
 ---
 ### Functions<a name="Functions"></a>
 
@@ -196,6 +198,7 @@ console.log(half(5));
 // 2.5
 ```
 
+---
 ---
 ### Lists,strings..<a name="Data"></a>
 
@@ -296,6 +299,8 @@ console.log("OI".repeat(3));
 // OIOIOI
 ```
 
+---
+---
 ### Objects<a name="Objects"></a>
 **Objects**
 ```js
@@ -522,5 +527,6 @@ Key(kk)->Value(33)
 Key(rr)->Value(44)
 Key(ss)->Value(55)
 */
-
 ```
+
+---
