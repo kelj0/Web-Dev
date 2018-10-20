@@ -7,7 +7,8 @@
 -	[Conditional statements](#Conditional)
 -	[Loops](#Loops)
 -	[Functions](#Functions)
--	[Data Structures](#Data)
+-	[Lists,strings..](#Data)
+-	[Objects](#Objets)
 ---
 
 #### Hello world<a name="Hello"></a>
@@ -197,7 +198,7 @@ console.log(half(5));
 ```
 
 ---
-#### Data structures<a name="Data"></a>
+#### Lists,strings..<a name="Data"></a>
 
 **Lists**
 ```js
@@ -232,6 +233,56 @@ console.log(["will", words, "understand"]);
 console.log(["will", ...words, "understand"]);
 // ["will", "never", "fully", "understand"]
 ```
+
+**Strings**
+```js
+let s = "This is string"
+console.log(s);
+// This is string
+```
+String methods
+```js
+/*-----------
+ slice
+*/
+
+console.log("testing".slice(1,4));
+// est
+console.log("testing".slice(2));
+// sting
+
+/*-----------
+ indexOf 
+*/
+console.log("testing".indexOf("i"));
+// 4
+console.log("testing".indexOf("in"));//returns index of first char if found
+// 4
+
+/*-----------
+ trim 
+*/
+console.log("  okay \n ".trim());
+// okay
+
+/*-----------
+ split/join 
+*/
+let sentence = "testing this test msg";
+let words = sentence.split(" ");
+console.log(words);
+// ["testing", "this", "test", "msg"]
+console.log(words.join("|"));
+// testing|this|test|msg
+
+/*-----------
+ repeat 
+*/
+console.log("OI".repeat(3));
+// OIOIOI
+```
+
+#### Objects<a name="Objects"></a>
 
 **Objects**
 ```js
@@ -311,50 +362,80 @@ console.log(getTask()); // 6
 console.log(todoList);  // [1, 2, 3]
 ```
 
-**Strings**
+**Classes**
 ```js
-let s = "This is string"
-console.log(s);
-// This is string
+function protoRabbit(){
+ console.log("Rabbit created"); 
+}
+function makeRabbit(type) {
+  let rabbit = Object.create(protoRabbit);
+  rabbit.type = type;
+  return rabbit;
+}
+
+rabb = makeRabbit("luck");
+console.log(rabb.type);
+// luck
+
+
+class Rabbit {
+  constructor(type) {
+    this.type = type;
+  }
+  speak(line) {
+    console.log(`The ${this.type} rabbit says '${line}'`);
+  }
+}
+
+let killerRabbit = new Rabbit("killer");
+let blackRabbit = new Rabbit("black");
+blackRabbit.speak("u");
+// The black rabbit says 'u'
+killerRabbit.speak("hm");
+// The killer rabbit says 'hm'
 ```
-String methods
+**Maps**
 ```js
-/*-----------
- slice
-*/
+let ages = {
+	tt: 39,
+ 	kk: 22,
 
-console.log("testing".slice(1,4));
-// est
-console.log("testing".slice(2));
-// sting
+};
+console.log(`tt is ${ages["tt"]}`);
+// tt is 62
+console.log("Is kk age known?", "kk" in ages);
+// Is kk age known? false
+console.log("Is toString's age known?", "toString" in ages);
+// Is toString's age known? true
 
-/*-----------
- indexOf 
-*/
-console.log("testing".indexOf("i"));
-// 4
-console.log("testing".indexOf("in"));//returns index of first char if found
-// 4
+/*
+Using plain objects as maps is dangerous. There are 
+several possible ways to avoid this problem. First, it is 
+possible to create objects with no prototype. If you pass 
+null to Object.create, the resulting object will not derive 
+from Object.prototype and can safely be used as a map.
 
-/*-----------
- trim 
-*/
-console.log("  okay \n ".trim());
-// okay
+Object property names must be strings. If you need a map 
+whose keys can’t easily be converted to strings—such as 
+objects—you cannot use an object as your map.
 
-/*-----------
- split/join 
+Fortunately, JavaScript comes with a class called Map 
+that is written for this exact purpose. It stores a 
+mapping and allows any type of keys
 */
-let sentence = "testing this test msg";
-let words = sentence.split(" ");
-console.log(words);
-// ["testing", "this", "test", "msg"]
-console.log(words.join("|"));
-// testing|this|test|msg
+let ages = new Map();
+ages.set("tt",22);
+ages.set("kk",33);
+ages.set("rr",44);
+ages.set("ss",55);
 
-/*-----------
- repeat 
+for(let k of ages)
+	console.log(`Key(${k[0]})->Value(${k[1]})`);
+
+/*
+Key(tt)->Value(22)
+Key(kk)->Value(33)
+Key(rr)->Value(44)
+Key(ss)->Value(55)
 */
-console.log("OI".repeat(3));
-// OIOIOI
 ```
