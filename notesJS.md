@@ -8,7 +8,7 @@
 -	[Loops](#Loops)
 -	[Functions](#Functions)
 -	[Lists,strings..](#Data)
--	[Objects](#Objets)
+-	[Objects](#Objects)
 ---
 
 #### Hello world<a name="Hello"></a>
@@ -282,7 +282,6 @@ console.log("OI".repeat(3));
 ```
 
 #### Objects<a name="Objects"></a>
-
 **Objects**
 ```js
 let day1 = {
