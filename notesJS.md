@@ -33,15 +33,16 @@ console.log(word);
 ---
 ### Conditional statements<a name="Conditional"></a>
 ```js
+/*-----------
+ if/else if/else
+*/
 let theNumber = Number(prompt("Pick a number");
 if(!Number.isNaN(theNumber)){
 	console.log("Your number is " +  theNumber);
 } else{
 	console.log("Hey why you didnt write number?");
 }
-```
 
-```js
 let num = Number(prompt("Pick a number"));
 if (num < 10) {
 	console.log("Small");
@@ -50,9 +51,10 @@ if (num < 10) {
 } else {
 	console.log("Large");
 }
-```
 
-```js
+/*-----------
+ switch
+*/
 switch (prompt("What is the weather like?")) {
 	case "rainy":
 		console.log("Remember to bring an umbrella.");
@@ -71,8 +73,11 @@ switch (prompt("What is the weather like?")) {
 ---
 ---
 ### Loops<a name="Loops"></a>
-**while**
 ```js
+/*-----------
+ while
+*/
+
 let result = 1;
 let counter = 0;
 while (counter < 10) {
@@ -81,20 +86,20 @@ while (counter < 10) {
 }
 console.log(result);
 // 1024
-```
 
+/*-----------
 **do while**
-```js
+*/
 let yourName;
 do {
 	yourName = prompt("Who are you?");
 } while (!yourName);
 console.log(yourName);
 // prompts and loops until you input some "name"
-```
 
-**for**
-```js
+/*-----------
+ for
+*/
 for(let number = 0 ; number <= 12; number = number+2) {
 	console.log(number);
 }
@@ -169,9 +174,10 @@ console.log(minus(10));
 // -10
 console.log(minus(10,5));
 // 5
-```
-```js
-// Assigning default to value
+
+/*-----------
+ Assigning default to value
+*/
 function power(base,exponent=2){
 	let result = 1
 	for(let count=0;count<exponent;count++){
@@ -242,7 +248,9 @@ console.log([0, 1, 2, 3, 4].slice(2, 4));
 console.log([0, 1, 2, 3, 4].slice(2));
 // [2, 3, 4]
 
-// "Unpacking list"
+/*-----------
+"Unpacking list"
+*/
 let words = ["never", "fully"];
 console.log(["will", words, "understand"]);
 // ["will", ["never", "fully"], "understand"]
@@ -262,7 +270,6 @@ String methods
 /*-----------
  slice
 */
-
 console.log("testing".slice(1,4));
 // est
 console.log("testing".slice(2));
@@ -382,20 +389,6 @@ console.log(todoList);  // [1, 2, 3]
 
 **Classes**
 ```js
-function protoRabbit(){
- console.log("Rabbit created"); 
-}
-function makeRabbit(type) {
-  let rabbit = Object.create(protoRabbit);
-  rabbit.type = type;
-  return rabbit;
-}
-
-rabb = makeRabbit("luck");
-console.log(rabb.type);
-// luck
-
-
 class Rabbit {
   constructor(type) {
     this.type = type;
@@ -496,6 +489,20 @@ console.log("Is kk age known?", "kk" in ages);
 // Is kk age known? false
 console.log("Is toString's age known?", "toString" in ages);
 // Is toString's age known? true
+
+============================
+function protoRabbit(){
+ console.log("Rabbit created"); 
+}
+function makeRabbit(type) {
+  let rabbit = Object.create(protoRabbit);
+  rabbit.type = type;
+  return rabbit;
+}
+
+rabb = makeRabbit("luck");
+console.log(rabb.type);
+// luck
 
 /*
 Using plain objects as maps is dangerous. There are 
