@@ -70,7 +70,6 @@ switch (prompt("What is the weather like?")) {
 
 ---
 #### Loops<a name="Loops"></a>
-
 **while**
 ```js
 let result = 1;
