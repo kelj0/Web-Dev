@@ -9,6 +9,7 @@
 -	[Functions](#Functions)
 -	[Lists,strings..](#Data)
 -	[Objects](#Objects)
+-	[Errors](#Errors)
 ---
 
 ### Hello world<a name="Hello"></a>
@@ -73,6 +74,7 @@ switch (prompt("What is the weather like?")) {
 ---
 ---
 ### Loops<a name="Loops"></a>
+
 ```js
 /*-----------
  while
@@ -88,7 +90,7 @@ console.log(result);
 // 1024
 
 /*-----------
-**do while**
+ do while
 */
 let yourName;
 do {
@@ -537,3 +539,99 @@ Key(ss)->Value(55)
 ```
 
 ---
+---
+### Errors<a name="Errors></a>
+
+**Strict mode**
+```js
+function canYouSpotTheProblem(){
+	"use strict";
+	for(counter = 0; counter < 10;counter++)
+		console.log("Cat");
+}
+canYouSpotTheProblem();
+// ReferenceError: counter is not defined 
+
+/*
+Normally, when you forget to put let in front of your binding, as with counter in 
+the example, JavaScript quietly creates a global binding and uses that. In strict 
+mode, an error is reported instead.
+*/
+// Another example
+function Person(name){this.name = name;}
+let kk = Person("kk"); // forgot to put new Person .. ups
+console.log(name);
+// kk
+/*
+So the Person call without 'new' returned undefined and created new global binding 'name'
+*/
+"use strict";
+function Person(name){this.name = name;}
+let kk = Person("kk"); // forgot to put new Person .. ups
+// TypeError: Cannot set property 'name' of undefined
+
+
+// Take this example (function tries to convert a whole number to a string in a given base
+function numberToString(n, base = 10) {
+  let result = "", sign = "";
+  if (n < 0) {
+    sign = "-";
+    n = -n;
+  }
+  do {
+    result = String(n % base) + result;
+    n = Math.floor(n/base);
+  } while (n > 0);
+  return sign + result;
+}
+console.log(numberToString(10, 2)); // expected output 1010
+// Output is not nice (alot of numbers)
+/*!!!!!!!!!!
+Even if you see problem already, read this
+This is where you must resist the urge to start making random changes to the code 
+to see whether that makes it better. Instead, think. Analyze what is happening and 
+come up with a theory of why it might be happening. Then, make additional observations 
+to test this theory—or, if you don’t yet have a theory, make additional observations to 
+help you come up with one.
+*/
+
+/*
+ After some theory put some console.log() on important places (after loops, after function calls...)
+ After few strategic console.logs we can see that n/=base doesnt produce whole number
+ what we actually want is n = Math.floor(n/base);
+*/
+
+/*--------
+  Try/catch
+*/
+
+function promptDirection(question) {
+  let result = prompt(question);
+  if (result.toLowerCase() == "left") return "L";
+  if (result.toLowerCase() == "right") return "R";
+  throw new Error("Invalid direction: " + result);
+}
+
+function look() {
+  if (promptDirection("Which way?(left/right)") == "L") {
+    return "a cat";
+  } else {
+    return "two attacking cats";
+  }
+}
+
+try {
+  console.log("You see", look());
+} catch (error) {
+  console.log("OIOIOIOI: " + error);
+}
+
+```
+
+
+
+
+
+
+
+
