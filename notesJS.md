@@ -109,7 +109,6 @@ for(let number = 0 ; number <= 12; number = number+2) {
 // 2
 // ..
 
-
 for(let i of [1,2,3])
 	console.log(i);
 // 1
@@ -117,6 +116,9 @@ for(let i of [1,2,3])
 // 3
 // this is like "for i in [1,2,3,4]" in python
 
+for(;;){ // its like while(true) loop
+	console.log("oioi")
+}
 ```
 
 **Breaking** out of loop
@@ -602,7 +604,7 @@ help you come up with one.
 */
 
 /*--------
-  Try/catch
+  Try/catch/finally
 */
 
 function promptDirection(question) {
@@ -624,8 +626,23 @@ try {
   console.log("You see", look());
 } catch (error) {
   console.log("OIOIOIOI: " + error);
+}finally{
+  console.log("meow");
 }
 
+/*
+input: 
+	left
+output:
+	You see a cat
+	meow
+
+input:
+	ups
+output:
+	OIOIOIOI: Error: Invalid direction: ups
+	meow
+*/
 ```
 
 
