@@ -10,6 +10,8 @@
 -	[Lists,strings..](#Data)
 -	[Objects](#Objects)
 -	[Errors](#Errors)
+-	[Regex](#Regex)
+-	[Time](#Time)
 ---
 
 ### Hello world<a name="Hello"></a>
@@ -645,10 +647,86 @@ output:
 */
 ```
 
+---
+---
+### Regex<a name="Regex"></a>
+
+```js
+/*---------
+  test (return true of false if re was successfull)
+*/
+let re1 = new RegExp("abc");
+let re2 = /abc/;        // rel2 has same pattern as rel1
+console.log(re2.test("abcde"));   // true
+console.log(/abc/.test("abcde")); // true
+let s = "abcd";
+console.log(re2.test(s)); // true
 
 
 
+/*---------
+  exec (return null if no match was found and return object with inf about the match otherwise)
+*/
+let re2 = /abc/;        // rel2 has same pattern as rel1
+console.log(re2.exec("abcde"));   // ["abc"]
+console.log(/abc/.exec("abcde")); // ["abc"]
+let s = "abcd";
+console.log(re2.exec(s)); // ["abc"]
+
+/*---------
+  search method (returns first index on which the expression was found or -1 if it wasnt found)
+*/
+console.log("  word".search(/\S/));
+// 2
+console.log("    ".search(/\S/));
+// -1
 
 
+/*---------
+  Usefull functions
+*/
+// strip comments
+function stripComments(code) {
+	return code.replace(/\/\/.*|\/\*[^]*?\*\//g, "");
+}
+console.log(stripComments("1 + /* 2 */3"));
+// 1 + 3
+console.log(stripComments("x = 10;// ten!"));
+// x = 10;
+console.log(stripComments("1 /* a */+/* b */ 1"));
+// 1  1
+
+//loop over matches
+function loopRe(s,re){
+	let match;
+	while (match = number.exec(input))
+		console.log("Found", match[0], "at", match.index);  
+}
+let input = "A string with 3 numbers in it... 42 and 88.";
+let number = /\b\d+\b/g;
+loopRe(input,number);
+// Found 3 at 14
+// Found 42 at 33
+// Found 88 at 40
+
+```
 
 
+### Time<a name="Time"></a>
+```js
+console.log(new Date());
+// Sun Oct 21 2018 22:11:59 GMT+0200 (Central European Summer Time)
+
+console.log(new Date(2009, 11, 9));
+// Wed Dec 09 2009 00:00:00 GMT+0100 (Central European Standard Time)
+console.log(new Date(2009, 11, 9, 12, 59, 59, 999));
+// Wed Dec 09 2009 12:59:59 GMT+0100 (Central European Standard Time)
+
+
+console.log(new Date(2013, 11, 19).getTime());
+// 1387407600000
+console.log(new Date(1387407600000));
+// Thu Dec 19 2013 00:00:00 GMT+0100 (CET)
+
+
+```
