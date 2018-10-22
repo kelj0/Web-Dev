@@ -49,5 +49,4 @@
 ### Projects
 - [x] - Copy of google static page [[done](https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/googleCopy)]
 - [x] - [Download](http://www.csszengarden.com/) a HTML file and make css for it [[done](https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/cssGarden)]
-- [ ] - Recreate [this](http://jthemes.org/demo-admin/minton/) [[not done](https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/mintonCopy)]
 - [x] - Make calculator [link](https://github.com/kelj0/Web-Dev/blob/master/Small_Projects/Calculator) (will come back to this later and make it better)
