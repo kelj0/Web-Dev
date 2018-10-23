@@ -1,9 +1,9 @@
 ### Notes:
 
--	[HTML](https://github.com/kelj0/Web-Dev/blob/master/notesHTML.md)
--	[CSS](https://github.com/kelj0/Web-Dev/blob/master/notesCSS.md)
--	[JS](https://github.com/kelj0/Web-Dev/blob/master/notesJS.md)
--	[MD](https://github.com/kelj0/Web-Dev/blob/master/notesMD.md)
+-	[HTML](notesHTML.md)
+-	[CSS](notesCSS.md)
+-	[JS](notesJS.md)
+-	[MD](notesMD.md)
 
 
 ## Reading checklist
