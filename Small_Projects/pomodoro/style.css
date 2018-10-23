@@ -1,0 +1,12 @@
+.main table{
+    margin-left: 40%;
+    margin-top: 15%;
+}
+
+#mainTime{
+    font-size: 128px;
+}
+
+table tr td{
+    border-width: 2px;
+}
