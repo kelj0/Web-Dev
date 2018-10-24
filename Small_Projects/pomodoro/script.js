@@ -7,13 +7,14 @@ var counted = false;
 var pause = true;
 var pomodoroCounters = 0;
 var mode="work";
-
+var s = "stop"
 
 function start(){
     if(!counting){
         trigger = true;
         counting = true;
         pause = false;
+		s = "play"
         switchMode();
     }
 }
@@ -22,13 +23,18 @@ function stop(){
     trigger=false;
     counting = false;
     pause = true;
+	s = "stop";
 }
 
 function reset(){
-    document.getElementById("mainTime").innerHTML="25:01";
+	if(s=="play")
+		document.getElementById("mainTime").innerHTML="25:01";
+	else
+		document.getElementById("mainTime").innerHTML="25:00";
     trigger=false;
     counting=false;
     counted=false;
+	pause = true;
     pomodoroCounters = 0;
     mode = "work";
 }
@@ -100,7 +106,7 @@ function work(){
     }else{
         counted = false;
         counting = true;
-        if(!counted)
+        if(!counted && !pause)
             counter();
     }
 }

@@ -5,8 +5,61 @@
 
 #mainTime{
     font-size: 128px;
+    background-color: aliceblue;
+    border:10px dotted rgb(133, 123, 71);
+    color: rgb(172, 155, 134);
+}
+.main table tr td .startbtn{
+    background-color: green;
+    color: white;
+	margin-left:35px;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 20px;
+}
+.main table tr td .startbtn:hover{
+    padding: 15px;
+    border-radius: 40px;
+    border-color: rgb(9, 255, 0);
+    border-width: 3px;
+    margin-left: -5px;
+    margin-top: -5px;
+    transition:all 0.2s ease-in-out;
+    font-size: 24px;
 }
 
-table tr td{
-    border-width: 2px;
+.main table tr td .stopbtn{
+    background-color: rgb(163, 27, 27);
+    color: rgb(255, 247, 247);
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 20px;
+}
+.main table tr td .stopbtn:hover{
+    padding: 15px;
+    border-radius: 40px;
+    border-color: rgb(255, 0, 0);
+    border-width: 3px;
+    margin-left: -2px;
+    margin-top: -3px;
+    transition:all 0.2s ease-in-out;
+    font-size: 24px;
+}
+    
+.main table tr td .resetbtn{
+    background-color: rgb(97, 97, 97);
+    color: rgb(201, 201, 201);
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 20px;
+}
+.main table tr td .resetbtn:hover{
+    padding: 15px;
+    border-radius: 40px;
+    border-color: rgb(175, 175, 103);
+    border-width: 3px;
+    margin-left: 3px;
+    margin-top: -5px;
+    transition:all 0.2s ease-in-out;
+    font-size: 24px;
 }
