@@ -10,8 +10,8 @@
 -    [Tables](#Tables)
 -    [Forms](#Forms)
 -    [Text](#Text)
--    [Meta](#Meta)
--    [Video, Audio, Canvas](#Video)
+-    [Meta](#meta-tags)
+-    [Video, Audio, Canvas](#video-audio-canvas)
 ---
 
 ### Tags<a name="Tags"></a>
@@ -605,7 +605,7 @@ Everything between `<!--[if IE]>` and `<[endif]-->` will be picked up by Interne
 
 
 ---
-### Meta tags<a name="Meta"></a>
+### Meta tags<a name="meta-tags"></a>
 
 #### HTTP Equivalents
 ```
@@ -628,7 +628,7 @@ should rarely be used but the value can be:
 ```
 
 ---
-### Video, Audio, Canvas<a name="Video"></a>
+### Video, Audio, Canvas<a name="video-audio-canvas"></a>
 ```html
 <video src="video.mp4" controls></video>
 ```

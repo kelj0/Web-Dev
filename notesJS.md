@@ -12,11 +12,17 @@
 -	[Errors](#Errors)
 -	[Regex](#Regex)
 -	[Time](#Time)
+-	[Asynchronous Programming](#asynchronous-programming)
 ---
 
 ### Hello world<a name="Hello"></a>
 ```js
 console.log("Hello world!");
+// outputs Hello world! to console
+
+alert("Hello world");
+// pop-outs small box saying Hello world
+
 ```
 ---
 ---
@@ -728,5 +734,58 @@ console.log(new Date(2013, 11, 19).getTime());
 console.log(new Date(1387407600000));
 // Thu Dec 19 2013 00:00:00 GMT+0100 (CET)
 
+```
+
+### Asynchronous Programming<a name="asynchronous-programming"></a>
+* Synchronous programming 
+```
+function1--w--o--r--k--i--n--g-->done------------------------------------\
+-------w-a-i-t-i-n-g--f-o-r--f1-->function2--w--o--r--k--i--n--g-->done-->finished
+```
+* Asynchronous programming
+```
+-->function1--w--o--r--k--i--n--g-->done------\
+----->function2--w--o--r--k--i--n--g-->done--->finished
+```
+```
+Asynchronous programing is useful in this case.. it's 
+much faster to proces multiple requests in the same time
+```
+```js
+/*---------
+  Callbacks
+*/
+setTimeout(() => console.log("Hello"), 1000);
+// This outputs Hello to console with 1s delay 
+
+/*---------
+  Promises
+*/
+// very useful when you are getting some values from db, and waiting for db to send them
+// you can use promise to execute some code right after you achive that promise, see example
+
+function storage(db,name){
+	return new Promise(resolve=>{db.getUser(name)});
+} 
+storage(database,"admin")
+	.then(value=> console.log("Got", value));
+// js doesnt call value untill storage returned something.. useful right?
+
+/*--------
+ Errors
+/
+new Promise((_, reject) => reject(new Error("Fail")))
+  .then(value => console.log("Handler 1"))    
+  .catch(reason => {   // if there is error catch it
+    console.log("Caught failure " + reason);  //log it
+    return "nothing";   // and return nothing
+  })
+  .then(value => console.log("Handler 2", value)); //after that try calling value agian
+// Caught failure Error: Fail
+// Handler 2 nothing
 
 ```
+
+
+
+
