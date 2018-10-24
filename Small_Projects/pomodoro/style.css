@@ -1,6 +1,7 @@
+
 .main table{
-    margin-left: 40%;
-    margin-top: 15%;
+    margin-left: 20%;
+    margin-top: 5%;
 }
 
 #mainTime{
@@ -22,7 +23,7 @@
     border-radius: 40px;
     border-color: rgb(9, 255, 0);
     border-width: 3px;
-    margin-left: -5px;
+    margin-left: 30px;
     margin-top: -5px;
     transition:all 0.2s ease-in-out;
     font-size: 24px;
@@ -40,7 +41,7 @@
     border-radius: 40px;
     border-color: rgb(255, 0, 0);
     border-width: 3px;
-    margin-left: -2px;
+
     margin-top: -3px;
     transition:all 0.2s ease-in-out;
     font-size: 24px;
@@ -58,8 +59,76 @@
     border-radius: 40px;
     border-color: rgb(175, 175, 103);
     border-width: 3px;
-    margin-left: 3px;
+    margin-left: 8px;
     margin-top: -5px;
     transition:all 0.2s ease-in-out;
     font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+    .main table {
+		margin-left: 10%;
+		margin-top: 5%;
+    }
+	#mainTime{
+		font-size: 64px;
+	}
+	.main table tr td .startbtn{
+		background-color: green;
+		color: white;
+		margin-left:10px;
+		padding: 5px;
+		font-size: 24px;
+		border-radius: 10px;
+	}
+	.main table tr td .startbtn:hover{
+		padding: 10px;
+		border-radius: 20px;
+		border-color: rgb(9, 255, 0);
+		border-width: 2px;
+		margin-left: 10px;
+		transition:all 0.2s ease-in-out;
+		font-size: 24px;
+	}
+
+	.main table tr td .stopbtn{
+		background-color: rgb(163, 27, 27);
+		color: rgb(255, 247, 247);
+		padding: 5px;
+		font-size: 24px;
+		border-radius: 10px;
+	}
+	.main table tr td .stopbtn:hover{
+		padding: 10px;
+		border-radius: 20px;
+		border-color: rgb(255, 0, 0);
+		border-width: 2px;
+		transition:all 0.2s ease-in-out;
+		font-size: 24px;
+	}
+		
+	.main table tr td .resetbtn{
+		background-color: rgb(97, 97, 97);
+		color: rgb(201, 201, 201);
+		padding: 5px;
+		font-size: 24px;
+		border-radius: 10px;
+	}
+	.main table tr td .resetbtn:hover{
+		padding: 10px;
+		border-radius: 20px;
+		border-color: rgb(175, 175, 103);
+		border-width: 2px;
+		margin-left: -4px;
+		transition:all 0.2s ease-in-out;
+		font-size: 24px;
+	}
+
+}
+
+@media only screen and (min-width: 1000px) {
+    .main table {
+		margin-left: 40%;
+		margin-top: 5%;
+    }
 }
