@@ -40,11 +40,8 @@
 - [ ] - https://css-tricks.com/bem-101/
 - [ ] - http://diveinto.html5doctor.com/
 ### JS
-- [ ] - http://www.htmldog.com/guides/javascript/beginner/
-- [ ] - http://www.htmldog.com/guides/javascript/intermediate/
-- [ ] - http://www.htmldog.com/guides/javascript/advanced/
 - [ ] - https://eloquentjavascript.net/
-- [ ] - https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going
+- [x] - https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going
 
 ### Projects
 - [x] - Copy of google static page [[done](Small_Projects/googleCopy)]
