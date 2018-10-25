@@ -16,9 +16,10 @@ presentation of that document
 -    [Pseudo classes](#Pseudo)
 -    [Pseudo elements](#PseudoE)
 -    [Page Layout](#Page)
--    [Media Queries](#Media)
+-    [Media Queries](#media-queries)
 -    [Transitions](#Transitions)
 -    [Lists](#Lists)
+-	 [Performance organization](#performance-organization)
 -    [Random Notes](#Random)
 ---
 
@@ -476,12 +477,17 @@ blockquote:after{
     content: close-quote;
 }
 li:before{
-    content: "POW! ";
+    content: "POW! ";    /* POW! item1*/
 }
 p:before{
-    content: url(images/jam.jpg);
+    content: url(images/jam.jpg); /* [img]text */
+}
+a:after{
+	content: "(" attr(href) ")";   /* link (https://www.link.com) */
+	font-size: 11px;   
 }
 ```
+
 You can also style that elements
 ```css
 li:before{
@@ -575,11 +581,48 @@ width: 300px;
 margin: 10px;
 }
 ```
+#### Z-Index property
+```
+in order to apply the z-index property to an element, 
+you must first apply a position value of relative, 
+absolute, or fixed.
+
+The element with the highest z-index value will 
+appear on the top regardless of its placement in the DOM.
+```
+```html
+<div class="box-set">
+  <figure class="box box-1">Box 1</figure>
+  <figure class="box box-2">Box 2</figure>
+</div>
+```
+```css
+.box-set {
+  background: #eaeaed;
+  height: 160px;
+  position: relative;
+}
+.box {
+  background: #2db34a;
+  border: 2px solid #ff7b29;
+  position: absolute;
+}
+.box-1 {
+  left: 10px;
+  top: 10px;
+}
+.box-2 {
+  bottom: 10px;
+  left: 70px;
+  z-index: 3;
+}
+```
+**box-2** is "on top of" **box-1**
 
 
 
 ---
-### Media queries<a name="Media"></a>
+### Media queries<a name="media-queries"></a>
 `@media` at-rules, used to target styles at specific media, such as screen or print
 ```css
 @media screen and (max-width: 1000px) {
@@ -670,6 +713,78 @@ ul.season{
   
 * this is
 inside
+```
+
+---
+### Performance organization<a name="performance-organization"></a>
+* **Keep selectors short**
+```css
+/* Bad */
+header nav ul li a {...}
+
+/* Good */
+.primary-link {...}
+
+/* Bad */
+button strong span {...}
+button strong span .callout {...}
+
+/* Good */
+button span {...}
+button .callout {...}
+```
+* **Favor classes**
+```css
+/* Bad */
+#container header nav {...}
+
+/* Good */
+.primary-nav {...}
+
+/* Bad */
+article.feat-post {...}
+
+/* Good */
+.feat-post {...}
+```
+* **Reusable code**
+```css
+/* Bad */
+.cats {
+  background: #eee;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+}
+.similarcats {
+  background: #eee;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+}
+
+/* Good */
+.cats,
+.similarcats {
+  background: #eee;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+}
+
+/* Even Better */
+.animals {
+  background: #eee;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+}
+```
+* **Reduce HTTP Requests**
+```css
+<!-- Bad -->
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/base.css" rel="stylesheet">
+<link href="css/site.css" rel="stylesheet">
+
+<!-- Good -->
+<link href="css/styles.css" rel="stylesheet">
 ```
 
 
