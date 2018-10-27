@@ -34,8 +34,8 @@
 - [x] - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 - [x] - https://css-tricks.com/things-ive-learned-css-grid-layout/
 - [x] - https://css-tricks.com/snippets/css/complete-guide-grid/
-- [ ] - https://learn.shayhowe.com/advanced-html-css/
-- [ ] - https://en.bem.info/methodology/
+- [x] - https://learn.shayhowe.com/advanced-html-css/
+- [x] - https://en.bem.info/methodology/
 - [ ] - http://getbem.com/
 - [ ] - https://css-tricks.com/bem-101/
 - [ ] - http://diveinto.html5doctor.com/
@@ -48,3 +48,4 @@
 - [x] - [Download](http://www.csszengarden.com/) a HTML file and make css for it [[done](Small_Projects/cssGarden)]
 - [x] - Make calculator [link](Small_Projects/Calculator) (will come back to this later and make it better)
 - [x] - Make pomodoro [link](Small_Projects/pomodoro)
+- [ ] - Make CSS Framework
