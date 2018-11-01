@@ -13,6 +13,8 @@
 -	[Regex](#Regex)
 -	[Time](#Time)
 -	[Asynchronous Programming](#asynchronous-programming)
+-	[Interacting with html](#interacting-with-html)
+-	[Event handlers](#event-handlers)
 ---
 
 ### Hello world<a name="Hello"></a>
@@ -787,5 +789,153 @@ new Promise((_, reject) => reject(new Error("Fail")))
 ```
 
 
+### Interacting with html<a name="interacting-with-html"></a>
+
+Take following html as example:
+```html
+<p>Test1</p>
+<p>Test2<strong> Test3</strong></p>
+```
+```js
+
+/*---------
+  Selecting elements
+*/
+function listElements(node) {
+  for (let i = 0; i < node.childNodes.length; i++) { // go through html (you cant use for/of!)
+    let child = node.childNodes[i];  // get first element( in this case <p>)
+    if (child.nodeType == document.ELEMENT_NODE) {
+      console.log(child);  
+      listElements(child); // call list elements resursivly cause to "pick up" nested html 
+    }					   // in this case <strong> tag in <p>
+  }
+}
+listElements(document.body);
+/* output:
+HTMLBodyElement{}
+HTMLParagraphElement{}
+HTMLParagraphElement{}
+HTMLElement{}
+*/
 
 
+// On the same example html we can select specific html tags
+console.log(document.body.getElementsByTagName("p"));
+/* output
+HTMLCollection {
+	0:	HTMLParagraphElement{}
+	1:	HTMLParagraphElement{}
+}
+*/
+```
+Changing the document
+```html
+<p>One</p>
+<p>Two</p>
+<p>Three</p>
+```
+```js
+let paragraphs = document.body.getElementsByTagName("p");
+document.body.insertBefore(paragraphs[2], paragraphs[0]);
+
+/* page displays:
+Three
+One
+Two
+*/
+/* Note
+All operations that insert a node somewhere 
+will, as a side effect, cause it to be 
+removed from its current position (if it has one)
+*/
+
+```
+Creating nodes
+```html
+<p>The <img src="cat.png" alt="Cat"></p>
+
+<p><button onclick="replaceImg()">Replace</button></p>
+```
+```js
+function replaceImg(){
+	let image = document.body.getElementsByTagName("img")[0];
+	let text = document.createTextNode(image.alt);
+	image.parentNode.replaceChild(text,image);
+}
+```
+
+### Event handlers<a name="event-handlers></a>
+
+Following code snippets are self explainatory
+```html
+<p>Demo html</p>
+```
+When you click on page, outputs oi
+```js
+window.addEventListener("click", () => {
+    console.log("oi");
+});
+```
+```html
+<button>Click me</button>
+<p>No handler here.</p>
+```
+Only if you click on button it outputs oi
+```js
+let button = document.querySelector("button");
+button.addEventListener("click", () => {
+  console.log("oi");
+});
+```
+```html
+<button>Act-once button</button>
+```
+Button that outputs oi only one time , then removes listener from it
+```js
+let button = document.querySelector("button");
+function once() {
+  console.log("oi");
+  button.removeEventListener("click", once);
+}
+button.addEventListener("click", once);
+```
+```html
+<button>Click me any way you want</button>
+```
+You can click button with L/M or R mouse button, and it will output belonging text
+```js
+let button = document.querySelector("button");
+button.addEventListener("mousedown", event => {
+  if (event.button == 0) {
+    console.log("Left button");
+  } else if (event.button == 1) {
+    console.log("Middle button");
+  } else if (event.button == 2) {
+    console.log("Right button");
+  }
+});
+```
+```html
+<button>A</button>
+<button>B</button>
+<button>C</button>
+```
+When you click button it will output text content of button
+```js
+document.body.addEventListener("click", event => {
+  if (event.target.nodeName == "BUTTON") {
+    console.log(event.target.textContent);
+  }
+});
+```
+```html
+<a href="https://github.com">Github</a>
+```
+Removes default behaviour(it wont open link , it will output nope)
+```js
+let link = document.querySelector("a");
+link.addEventListener("click", event => {
+  console.log("Nope.");
+  event.preventDefault();
+});
+```
