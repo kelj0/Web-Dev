@@ -864,7 +864,7 @@ function replaceImg(){
 }
 ```
 
-### Event handlers<a name="event-handlers></a>
+### Event handlers<a name="event-handlers"></a>
 
 Following code snippets are self explainatory
 ```html
