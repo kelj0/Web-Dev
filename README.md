@@ -39,11 +39,11 @@
 - [x] - http://getbem.com/
 - [x] - https://css-tricks.com/bem-101/
 - [ ] - http://diveinto.html5doctor.com/
-- [ ] - https://semantic-ui.com/elements/button.html
+- [x] - https://semantic-ui.com/elements/button.html
 - [ ] - https://google.github.io/styleguide/htmlcssguide.html
 - [x] - https://css-tricks.com/snippets/css/complete-guide-grid/
 ### JS
-- [ ] - https://eloquentjavascript.net/
+- [x] - https://eloquentjavascript.net/
 - [x] - [You dont know JS part1](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)
 - [ ] - [You dont know JS part2](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypese)
 ### Projects

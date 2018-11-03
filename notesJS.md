@@ -1017,3 +1017,76 @@ function moved(event) {
   }
 }
 ```
+
+---
+Scroll progress indicator
+```css
+#progress {
+  border-bottom: 5px solid blue;
+  width: 0;
+  position: fixed;
+  top: 0; left: 0;
+}
+```
+```html
+<div id="progress"></div>
+```
+```js
+// Create some content
+document.body.appendChild(document.createTextNode(
+  "oioioioioioio ".repeat(1000)));
+
+let bar = document.querySelector("#progress");
+window.addEventListener("scroll", () => {
+  let max = document.body.scrollHeight - innerHeight;
+  bar.style.width = `${(pageYOffset / max) * 100}%`;
+});
+```
+
+---
+Focus events
+```html
+<p>Name: <input type="text" data-help="Your full name"></p>
+<p>Age: <input type="text" data-help="Your age in years"></p>
+<p id="help"></p>
+```
+```js
+let help = document.querySelector("#help");
+let fields = document.querySelectorAll("input");
+for (let field of Array.from(fields)) {
+  field.addEventListener("focus", event => {
+    let text = event.target.getAttribute("data-help");
+    help.textContent = text; //Write Your full name or Your age in years below input
+  });
+  field.addEventListener("blur", event => {
+    help.textContent = "";
+  });
+}
+```
+
+---
+Input events
+```html
+<textarea> Type something here... </textarea>
+```
+```js
+let textarea = document.querySelector("textarea");
+let timeout;
+textarea.addEventListener("input", () => {
+  clearTimeout(timeout);
+  timeout = setTimeout(() => console.log("Typed!"), 500);
+});
+```
+
+---
+Timing (setInterval and clearInterval are used to set timers that should repeat every X milliseconds
+```js
+let ticks = 0;
+let clock = setInterval(() => {
+  console.log("tick", ticks++);
+  if (ticks == 10) {
+    clearInterval(clock);
+    console.log("stop.");
+  }
+}, 200);
+```
