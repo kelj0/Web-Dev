@@ -866,31 +866,35 @@ function replaceImg(){
 
 ### Event handlers<a name="event-handlers"></a>
 
-Following code snippets are self explainatory
+
+When you click on page, outputs oi
 ```html
 <p>Demo html</p>
 ```
-When you click on page, outputs oi
 ```js
 window.addEventListener("click", () => {
     console.log("oi");
 });
 ```
+
+---
+Only if you click on button it outputs oi
 ```html
 <button>Click me</button>
 <p>No handler here.</p>
 ```
-Only if you click on button it outputs oi
 ```js
 let button = document.querySelector("button");
 button.addEventListener("click", () => {
   console.log("oi");
 });
 ```
+
+---
+Button that outputs oi only one time , then removes listener from it
 ```html
 <button>Act-once button</button>
 ```
-Button that outputs oi only one time , then removes listener from it
 ```js
 let button = document.querySelector("button");
 function once() {
@@ -899,10 +903,12 @@ function once() {
 }
 button.addEventListener("click", once);
 ```
+
+---
+You can click button with L/M or R mouse button, and it will output belonging text
 ```html
 <button>Click me any way you want</button>
 ```
-You can click button with L/M or R mouse button, and it will output belonging text
 ```js
 let button = document.querySelector("button");
 button.addEventListener("mousedown", event => {
@@ -915,12 +921,14 @@ button.addEventListener("mousedown", event => {
   }
 });
 ```
+
+---
+When you click button it will output text content of button
 ```html
 <button>A</button>
 <button>B</button>
 <button>C</button>
 ```
-When you click button it will output text content of button
 ```js
 document.body.addEventListener("click", event => {
   if (event.target.nodeName == "BUTTON") {
@@ -928,14 +936,84 @@ document.body.addEventListener("click", event => {
   }
 });
 ```
+
+---
+Removes default behaviour(it wont open link , it will output nope)
 ```html
 <a href="https://github.com">Github</a>
 ```
-Removes default behaviour(it wont open link , it will output nope)
 ```js
 let link = document.querySelector("a");
 link.addEventListener("click", event => {
   console.log("Nope.");
   event.preventDefault();
 });
+```
+
+---
+Multiple keydowns as trigger
+```html
+<p>Press Control-Space to continue</p>
+```
+```js
+window.addEventListener("keydown", event => {
+    if (event.key == " " && event.ctrlKey) {
+      console.log("Continuing!");
+    }
+});
+```
+
+---
+Drawing dots on screen with mouse press
+```css
+body {
+    height: 200px;
+    background: beige;
+}
+.dot {
+    height: 8px; width: 8px;
+    border-radius: 4px; /* rounds corders (basicly put that half of dots h or w to round perfectly*/
+    background: blue;
+    position: absolute;
+}
+```
+```js
+window.addEventListener("click", event => {
+    let dot = document.createElement("div");
+    dot.className = "dot";
+    dot.style.left = (event.pageX - 4) + "px"; // -4 cause of h and w is 8 if you didnt sub 4 
+    dot.style.top = (event.pageY - 4) + "px";  // dot would be down and right from mouse
+    document.body.appendChild(dot);            // So basicly sub half of dots h from y and half
+});                                            // of w from x
+```
+
+---
+Dragging
+```html
+<p>Drag the bar to change its width:</p>
+<div style="background: orange; width: 60px; height: 20px">
+</div>
+```
+```js
+let lastX;
+console.log(lastX);// tracks last mouse X position
+let bar = document.querySelector("div");  // 'gets' bar
+bar.addEventListener("mousedown", event => {
+  if (event.button == 0) {
+    lastX = event.clientX; // gets mouse X
+    window.addEventListener("mousemove", moved); // adds  listener and calls moved
+    event.preventDefault(); // remove selection of bar
+  }
+});
+
+function moved(event) {
+  if (event.buttons == 0) {                         //event.buttons==0->no buttonts down
+    window.removeEventListener("mousemove", moved); // 1-> left button, 2->right, 4-> middle
+  } else {
+    let dist = event.clientX - lastX;
+    let newWidth = Math.max(10, bar.offsetWidth + dist);
+    bar.style.width = newWidth + "px";
+    lastX = event.clientX;
+  }
+}
 ```
