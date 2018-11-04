@@ -1,4 +1,4 @@
-# HTML Notes
+## HTML Notes
 
 ---
 -    [Tags](#Tags)

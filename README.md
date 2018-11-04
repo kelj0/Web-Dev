@@ -4,7 +4,7 @@
 -	[CSS](notesCSS.md)
 -	[JS](notesJS.md)
 -	[MD](notesMD.md)
-
+-	[google CSS/HTML style guide](google_HTML-CSS_Style.md)
 
 ## Reading checklist
 
@@ -40,7 +40,7 @@
 - [x] - https://css-tricks.com/bem-101/
 - [ ] - http://diveinto.html5doctor.com/
 - [x] - https://semantic-ui.com/elements/button.html
-- [ ] - https://google.github.io/styleguide/htmlcssguide.html
+- [x] - https://google.github.io/styleguide/htmlcssguide.html
 - [x] - https://css-tricks.com/snippets/css/complete-guide-grid/
 ### JS
 - [x] - https://eloquentjavascript.net/

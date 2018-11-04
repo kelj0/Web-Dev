@@ -1,4 +1,4 @@
-# Syntax guide
+## Syntax guide
 
 ## Headers
 ```

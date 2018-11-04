@@ -1,4 +1,4 @@
-# CSS Notes
+## CSS Notes
 
 ```
 CSS, or Cascading Styles Sheets, is a way to style and present HTML. 
