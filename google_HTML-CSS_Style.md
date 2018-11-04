@@ -322,5 +322,190 @@ Use a **new line** for every **block, list, or table element**, and **indent** e
 ---
 ### CSS<a name="css"></a>
 
-`TODO`
+-   [CSS Validity](#css-validity)
+-   [ID and Class naming](#id-and-class-naming)
+-   [ID and Class Name Style](#id-and-class-name-style)
+-   [Type Selectors](#type-selectors)
+-   [Shorthand Properties](#shorthand-properties)
+-   [Declaration Order](#declaration-order)
+-   [Selector and Declaration Separation](#selector-and-declaration)
+-   [CSS Quotation Marks](#css-quotation-marks)
+-   [Section Comments](#section-comments)
+
+---
+#### CSS Validity<a name="css-validity"</a>
+
+Unless dealing with CSS validator bugs or requiring proprietary syntax, **use valid CSS code**
+
+Use tools such as the [W3C CSS validator](https://jigsaw.w3.org/css-validator/) to test
+
+---
+#### ID and Class Naming(#id-and-class-naming)
+
+```
+Instead of presentational or cryptic names, always use ID and class names that reflect 
+the purpose of the element in question, or that are otherwise generic.
+
+Names that are specific and reflect the purpose of the element should be preferred as 
+these are most understandable and the least likely to change.
+
+Generic names are simply a fallback for elements that have no particular or no meaning 
+different from their siblings. They are typically needed as “helpers.”
+
+Using functional or generic names reduces the probability of unnecessary document 
+or template changes.
+```
+
+```css
+/* Not recommended: meaningless */
+#yee-1901 {}
+
+/* Not recommended: presentational */
+.button-green {}
+.clear {}
+
+/* Recommended: specific */
+#gallery {}
+#login {}
+.video {}
+
+/* Recommended: generic */
+.aux {}
+.alt {}
+```
+
+---
+#### ID and Class Name Style<a name="id-and-class-name-style"></a>
+
+**Use ID and class names that are as short as possible but as long as necessary**
+
+```css
+/* Not recommended */
+#navigation {}
+.atr {}
+
+/* Recommended */
+#nav {}
+.author {}
+```
+
+---
+#### Type selectors<a name="type-selectors"></a>
+
+**Avoid qualifying** ID and class names **with type selectors**.
+```
+Unless necessary (for example with helper classes), do not use 
+element names in conjunction with IDs or classes.
+```
+```css
+/* Not recommended */
+ul#example {}
+div.error {}
+
+/* Recommended */
+#example {}
+.error {}
+```
+
+---
+#### Shorthand Properties<a name="shorthand-properties"></a>
+
+**Use shorthand properties where possible**
+
+```css
+/* Not recommended */
+border-top-style: none;
+font-family: palatino, georgia, serif;
+font-size: 100%;
+line-height: 1.6;
+padding-bottom: 2em;
+padding-left: 1em;
+padding-right: 1em;
+padding-top: 0;
+
+/* Recommended */
+border-top: 0;
+font: 100%/1.6 palatino, georgia, serif;
+padding: 0 1em 2em;
+```
+
+---
+#### Declaration Order<a name="declaration-order"></a>
+
+**Alphabetize declarations**
+
+```css
+background: fuchsia;
+border: 1px solid;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+color: black;
+text-align: center;
+text-indent: 2em;
+```
+
+#### Selector and Declaration Separation<a name="selector-and-declaration"></a>
+
+Separate selectors and declarations by new lines.
+
+Always start a new line for each selector and declaration.
+
+```css
+/* Not recommended */
+a:focus, a:active {
+  position: relative; top: 1px;
+}
+
+/* Recommended */
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  line-height: 1.2;
+}
+```
+
+---
+#### CSS Quotation Marks<a name="css-quotation-marks"></a>
+
+Use single ('') rather than double ("") quotation marks for attribute selectors and property values.
+
+Do not use quotation marks in URI values (url()).
+
+Exception: If you do need to use the @charset rule, use double quotation marks—single quotation marks are not permitted.
+
+```css
+/* Not recommended */
+@import url("https://www.google.com/css/maia.css");
+
+html {
+  font-family: "open sans", arial, sans-serif;
+}
+
+/* Recommended */
+@import url(https://www.google.com/css/maia.css);
+
+html {
+  font-family: 'open sans', arial, sans-serif;
+}
+```
+
+---
+#### Section Comments<a name="section-comments"></a>
+
+If possible, **group style sheet sections together by using comments**
+```css
+/* Header */
+
+#adw-header {}
+
+/* Footer */
+
+#adw-footer {}
+
+/* Gallery */
+
+.adw-gallery {}
+```
 
