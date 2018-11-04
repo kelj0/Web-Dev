@@ -200,14 +200,16 @@ immediately use CSS for, use no alternative text, as in alt=""
 
 **Strictly keep structure (markup), presentation (styling), and behavior (scripting) apart**
 ```
-That is, make sure documents and templates contain only HTML and HTML that is solely serving structural purposes
-Move everything presentational into style sheets, and everything behavioral into scripts
+That is, make sure documents and templates contain only HTML and HTML that is 
+solely serving structural purposes. Move everything presentational into style 
+sheets, and everything behavioral into scripts
 
-In addition, keep the contact area as small as possible by linking as few style sheets and 
-scripts as possible from documents and templates
+In addition, keep the contact area as small as possible by linking as few 
+style sheets and scripts as possible from documents and templates
 
-Separating structure from presentation from behavior is important for maintenance reasons. It is always more expensive 
-to change HTML documents and templates than it is to update style sheets and scripts.
+Separating structure from presentation from behavior is important for maintenance 
+reasons. It is always more expensive to change HTML documents and templates than 
+it is to update style sheets and scripts.
 ```
 
 ```html
