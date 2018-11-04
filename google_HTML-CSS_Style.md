@@ -308,7 +308,7 @@ Use a **new line** for every **block, list, or table element**, and **indent** e
 </table>
 ```
 
-#### HTML Quotation Marks<a name="html-quotation"</a>
+#### HTML Quotation Marks<a name="html-quotation"></a>
 
 **When quoting attributes values, use double quotation marks**
 ```html
