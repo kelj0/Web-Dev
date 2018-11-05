@@ -15,6 +15,9 @@
 -	[Asynchronous Programming](#asynchronous-programming)
 -	[Interacting with html](#interacting-with-html)
 -	[Event handlers](#event-handlers)
+
+---
+-	[Design patterns](#design-patterns)
 ---
 
 ### Hello world<a name="Hello"></a>
@@ -1090,3 +1093,72 @@ let clock = setInterval(() => {
   }
 }, 200);
 ```
+
+
+### Design patterns<a name="design-patterns"></a>
+
+```
+A pattern is a reusable solution that can be applied to 
+commonly occurring problems in software design 
+
+Patterns are not an exact solution. It’s important that we 
+remember the role of a pattern is merely to provide us with 
+a solution scheme. Patterns don’t solve all design problems 
+nor do they replace good software designers, however, 
+they do support them
+```
+
+---
+Some other advantages that patterns offer:
+* Reusing patterns assists in preventing minor issues that can 
+  cause major problems in the application development process
+* Patterns can provide generalized solutions which are documented 
+  in a fashion that doesn't require them to be tied to a specific problem
+* Certain patterns can actually decrease the overall file-size 
+  footprint of our code by avoiding repetition. 
+* Patterns add to a developer's vocabulary, which makes communication faster.
+* Patterns that are frequently used can be improved over time by harnessing 
+  the collective experiences other developers using those patterns contribute 
+  back to the design pattern community
+
+---
+A pattern may be **considered "good"** if it does the following:
+* Solves a particular problem
+* The solution to this problem cannot be obvious
+* The concept described must have been proven
+* It must describe a relationship
+
+---
+One of the additional requirements for a pattern to be valid 
+
+is that they display some recurring phenomenon (**the rule of three**)
+
+* Fitness of purpose -> how is the pattern considered successful?
+* Usefulness -> why is the pattern considered successful?
+* Applicability -> is design worthy of being a pattern because it has wider applicability?
+
+---
+A design pattern should have a:
+
+* **Pattern name** and a description
+* **Context outline** -> the contexts in which the pattern is effective in 
+  responding to the users needs.
+* **Problem statement** -> a statement of the problem being addressed so we 
+  can understand the intent of the pattern.
+* **Solution** -> a description of how the user’s problem is being solved in an 
+  understandable list of steps and perceptions.
+* **Design** -> a description of the pattern’s design and in particular, the 
+  user’s behavior in interacting with it
+* **Implementation** -> a guide to how the pattern would be implemented
+* **Illustrations** -> a visual representation of classes in the pattern (e.g. a diagram)
+* **Examples** -> an implementation of the pattern in a minimal form
+* **Co-requisites** -> what other patterns may be needed to support use of the 
+  pattern being described?
+* **Relations** -> what patterns does this pattern resemble? does it closely 
+  mimic any others?
+* **Known usage** -> is the pattern being used in the wild? If so, where and how?
+* **Discussions** -> the team or author’s thoughts on the exciting benefits of the pattern
+
+
+
+
