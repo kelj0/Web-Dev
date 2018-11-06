@@ -1,13 +1,13 @@
 ## JS Notes
 
 ---
--	[Hello world](#Hello)
+-	[Hello world](#hello-world)
 -	[Variables](#Variables)
 -	[Input](#Input)
--	[Conditional statements](#Conditional)
+-	[Conditional statements](#conditional-statements)
 -	[Loops](#Loops)
 -	[Functions](#Functions)
--	[Lists,strings..](#Data)
+-	[Lists,strings..](#listsstrings)
 -	[Objects](#Objects)
 -	[Errors](#Errors)
 -	[Regex](#Regex)
@@ -20,7 +20,7 @@
 -	[Design patterns](#design-patterns)
 ---
 
-### Hello world<a name="Hello"></a>
+### Hello world<a name="hello-world"></a>
 ```js
 console.log("Hello world!");
 // outputs Hello world! to console
@@ -45,7 +45,7 @@ console.log(word);
 ```
 ---
 ---
-### Conditional statements<a name="Conditional"></a>
+### Conditional statements<a name="conditional-statements"></a>
 ```js
 /*-----------
  if/else if/else
@@ -555,7 +555,7 @@ Key(ss)->Value(55)
 
 ---
 ---
-### Errors<a name="Errors></a>
+### Errors<a name="Errors"></a>
 
 **Strict mode**
 ```js
