@@ -1150,7 +1150,7 @@ is that they display some recurring phenomenon (**the rule of three**)
 * Applicability -> is design worthy of being a pattern because it has wider applicability?
 
 ---
-#### What it should have<a name="what-it-should-have"
+#### What it should have<a name="what-it-should-have"></a>
 A design pattern should have a:
 * **Pattern name** and a description
 * **Context outline** -> the contexts in which the pattern is effective in 
@@ -1189,7 +1189,7 @@ Tips if you are creating a **new design pattern**
 * Patterns need a strong set of examples
 
 ---
-#### Anti patterns<a name="anti-patterns></a>
+#### Anti patterns<a name="anti-patterns"></a>
 
 ```
 an anti-pattern is a bad design that is worthy of documenting. 
@@ -1208,7 +1208,7 @@ that the overall quality of our solutions improves instantly.
 ```
 
 ---
-#### Categories of Design Pattern<a name="categories-of-design-pattern"><a/>
+#### Categories of Design Pattern<a name="categories-of-design-pattern"></a>
 
 ##### Creational Design Patterns
 ```
