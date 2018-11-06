@@ -1097,6 +1097,16 @@ let clock = setInterval(() => {
 
 ### Design patterns<a name="design-patterns"></a>
 
+---
+-   [Basics](#basics)
+-   [When is pattern valid?](#when-is-pattern-valid)
+-   [What it should have?](#what-it-should-have)
+-   [Creating New](#creating-new)
+-   [Anti patterns](#anti-patterns)
+-   [Categories of Design Pattern](#categories-of-design-pattern)
+---
+
+#### Basics<a name="basics"></a>
 ```
 A pattern is a reusable solution that can be applied to 
 commonly occurring problems in software design 
@@ -1122,6 +1132,8 @@ Some other advantages that patterns offer:
   back to the design pattern community
 
 ---
+#### When is pattern valid<a name="when-is-pattern-valid"></a>
+
 A pattern may be **considered "good"** if it does the following:
 * Solves a particular problem
 * The solution to this problem cannot be obvious
@@ -1138,8 +1150,8 @@ is that they display some recurring phenomenon (**the rule of three**)
 * Applicability -> is design worthy of being a pattern because it has wider applicability?
 
 ---
+#### What it should have<a name="what-it-should-have"
 A design pattern should have a:
-
 * **Pattern name** and a description
 * **Context outline** -> the contexts in which the pattern is effective in 
   responding to the users needs.
@@ -1158,6 +1170,70 @@ A design pattern should have a:
   mimic any others?
 * **Known usage** -> is the pattern being used in the wild? If so, where and how?
 * **Discussions** -> the team or author’s thoughts on the exciting benefits of the pattern
+
+```
+If interested in venturing down the path of writing your own design patterns I recommend 
+learning from others who have already been through the process and done it well. Spend 
+time absorbing the information from a number of different design pattern descriptions 
+and take in what’s meaningful to you.
+```
+
+---
+#### Creating new<a name="creating-new"></a>
+
+Tips if you are creating a **new design pattern**
+* How practical is the pattern?
+* Keep best practices in mind
+* Our design patterns should be transparent to the user
+* Remember that originality is not key in pattern design
+* Patterns need a strong set of examples
+
+---
+#### Anti patterns<a name="anti-patterns></a>
+
+```
+an anti-pattern is a bad design that is worthy of documenting. 
+Examples of anti-patterns in JavaScript are the following:
+```
+* **Polluting the global namespace** by defining a large number of variables in the global context
+* **Passing strings rather than functions** to either setTimeout or setInterval
+* **Modifying the Object class prototype** (this is a **particularly bad anti-pattern**)
+* Using JavaScript in an **inline form** as this is inflexible
+* The use of **document.write** where native DOM alternatives such as **document.createElement** are more appropriate
+
+```
+Knowledge of anti-patterns is critical for success. Once we are able to recognize 
+such anti-patterns, we're able to refactor our code to negate them so 
+that the overall quality of our solutions improves instantly. 
+```
+
+---
+#### Categories of Design Pattern<a name="categories-of-design-pattern"><a/>
+
+##### Creational Design Patterns
+```
+they focus on handling object creation mechanisms where objects are 
+created in a manner suitable for the situation we're working in
+
+The basic approach to object creation might otherwise lead to 
+added complexity in a project whilst these patterns aim to 
+solve this problem by controlling the creation process
+```
+
+##### Structural Design Patterns
+```
+they are concerned with object composition and typically identify 
+simple ways to realize relationships between different objects
+
+They help ensure that when one part of a system changes, the 
+entire structure of the system doesn't need to do the same
+```
+
+##### Begavioral Design Patterns
+```
+Behavioral patterns focus on improving or streamlining the 
+communication between disparate objects in a system.
+```
 
 
 
