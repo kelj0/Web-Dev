@@ -1104,6 +1104,8 @@ let clock = setInterval(() => {
 -   [Creating New](#creating-new)
 -   [Anti patterns](#anti-patterns)
 -   [Categories of Design Pattern](#categories-of-design-pattern)
+-   [Design Pattern Categorization](#design-pattern-categorization)
+-   [JavaScript MV* Patterns](#javascript-mv-patterns)
 ---
 
 #### Basics<a name="basics"></a>
@@ -1235,6 +1237,90 @@ Behavioral patterns focus on improving or streamlining the
 communication between disparate objects in a system.
 ```
 
+---
+#### Design Pattern Categorization<a name="design-pattern-categorization"></a>
+
+```
+I recommend using this table as reference, but do remember that there 
+are a number of additional patterns that are not mentioned here
+```
+[link](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#summarytabledesignpatterns)
+
+---
+#### JavaScript MV* Patterns<a name="javascript-mv-patterns"></a>
+
+We will review three very important architectural patterns
+* [**MVC**(Model-View-Controller)](#MVC)
+* [**MVP**(Model-View-Presenter)](#MVP)
+* [**MVVM**(Model-View-ViewModel)](#MVVM)
+
+---
+##### MVC
+
+```
+MVC is an architectural design pattern that encourages improved application 
+organization through a separation of concerns. It enforces the isolation of 
+business data (Models) from user interfaces (Views), with a third component 
+(Controllers) traditionally managing logic and user-input
+```
+MVC is composed of three core components
+* Models
+* Views
+* Controllers
+
+###### Models
+```
+Models manage the data for an application. They are concerned with neither 
+the user-interface nor presentation layers but instead represent unique 
+forms of data that an application may require
+```
+When a model **changes** it will typically notify its observers that change has occurred
+ ```
+A model may also have multiple views observing it. If say, photo model contained 
+meta-data such as its location (longitude and latitude), friends that were present 
+in the photo (a list of identifiers) and a list of tags, a developer may decide 
+to provide a single view to display each of these three facets
+```
+**So to summarize, models are primarily concerned with business data.**
+
+###### Views
+```
+Views are a visual representation of models that present a filtered view of 
+their current state. Whilst Smalltalk views are about painting and maintaining 
+a bitmap, JavaScript views are about building and maintaining a DOM element
+
+Design pattern literature commonly refers to views as "dumb" given that 
+their knowledge of models and controllers in an application is limited
+```
+Users are able to **interact with views** and this includes the **ability to read and edit** models
+```
+For example, in the "photo gallery application", model editing could 
+be facilitated through an "edit' view where a user who has 
+selected a specific photo could edit its meta-data
+```
+The actual task of **updating the model** falls to **controllers**
+
+**To summarize, views are a visual representation of our application data**
 
 
+###### Controllers
+```
+Controllers are an intermediary between models and views which are 
+classically responsible for updating the model when the user 
+manipulates the view
+
+In "photo gallery application", a controller would be responsible 
+for handling changes the user made to the edit view for a particular 
+photo, updating a specific photo model when a user has finished editing
+```
+**To summarize, the takeaway from this section is that controllers manage the logic and**
+
+**coordination between models and views in an application**
+
+---
+##### MVP
+
+
+---
+##### MVVM
 
