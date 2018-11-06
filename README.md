@@ -38,17 +38,21 @@
 - [x] - https://en.bem.info/methodology/
 - [x] - http://getbem.com/
 - [x] - https://css-tricks.com/bem-101/
-- [ ] - http://diveinto.html5doctor.com/
+- [x] - http://diveinto.html5doctor.com/
 - [x] - https://semantic-ui.com/elements/button.html
 - [x] - https://google.github.io/styleguide/htmlcssguide.html
 - [x] - https://css-tricks.com/snippets/css/complete-guide-grid/
+
 ### JS
 - [x] - https://eloquentjavascript.net/
 - [x] - [You dont know JS part1](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)
 - [ ] - [You dont know JS part2](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypese)
+- [ ] - [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+
 ### Projects
 - [x] - Copy of google static page [[done](Small_Projects/googleCopy)]
 - [x] - [Download](http://www.csszengarden.com/) a HTML file and make css for it [[done](Small_Projects/cssGarden)]
 - [x] - Make calculator [link](Small_Projects/Calculator) (will come back to this later and make it better)
 - [x] - Make pomodoro [link](Small_Projects/pomodoro)
 - [x] - Make CSS Framework [link](https://github.com/kelj0/kelj0-css)
+- [ ] - Simple github frontend
