@@ -778,7 +778,7 @@ storage(database,"admin")
 
 /*--------
  Errors
-/
+*/
 new Promise((_, reject) => reject(new Error("Fail")))
   .then(value => console.log("Handler 1"))    
   .catch(reason => {   // if there is error catch it
@@ -1094,7 +1094,7 @@ let clock = setInterval(() => {
 }, 200);
 ```
 
-
+---
 ### Design patterns<a name="design-patterns"></a>
 
 ---
