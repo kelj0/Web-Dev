@@ -47,7 +47,7 @@
 - [x] - https://eloquentjavascript.net/
 - [x] - [You dont know JS part1](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)
 - [ ] - [You dont know JS part2](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypese)
-- [ ] - [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+- [x] - [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 ### Projects
 - [x] - Copy of google static page [[done](Small_Projects/googleCopy)]
