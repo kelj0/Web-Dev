@@ -1263,6 +1263,15 @@ organization through a separation of concerns. It enforces the isolation of
 business data (Models) from user interfaces (Views), with a third component 
 (Controllers) traditionally managing logic and user-input
 ```
+
+You might ask but **what does MVC give us?** well..
+
+* **Easier overall maintance**
+* **Significantly more straight-forward to write unit tests for business logic** (Decoupling models and views) 
+* **Duplication** of low-level model and controller code is **eliminated** across application
+* **Allows UI and core logic devs** to work simultaneously
+
+
 MVC is composed of three core components
 * Models
 * Views
@@ -1319,8 +1328,46 @@ photo, updating a specific photo model when a user has finished editing
 
 ---
 ##### MVP
+```
+Model-view-presenter (MVP) is a derivative of the MVC design 
+pattern which focuses on improving presentation logic.
 
+Unlike MVC, invocations from the view are delegated to the presenter, 
+which are decoupled from the view and instead talk to it through 
+an interface. This allows for all kinds of useful things such 
+as being able to mock views in unit tests.
+
+MVP is generally used most often in enterprise-level applications where 
+it's necessary to reuse as much presentation logic as possible
+
+In MVP, all of this complex logic can be encapsulated in a 
+presenter, which can simplify maintenance greatly
+```
 
 ---
 ##### MVVM
+```
+MVVM (Model View ViewModel) is an architectural pattern based 
+on MVC and MVP, which attempts to more clearly separate the 
+development of user-interfaces (UI) from that of the business 
+logic and behavior in an application.
+```
+
+Advantages 
+* MVVM Facilitates easier parallel development of a UI and the building blocks that power it
+* Abstracts the View and thus reduces the quantity of business logic (or glue) required in the code behind it
+* The ViewModel can be easier to unit test than event-driven code
+* The ViewModel (being more Model than View) can be tested without concerns of UI automation and interaction
+
+Disadvantages
+* For simpler UIs, MVVM can be overkill
+* Whilst data-bindings can be declarative and nice to work with, they can be 
+  harder to debug than imperative code where we simply set breakpoints
+* Data-bindings in non-trivial applications can create a lot of book-keeping. 
+  We also don’t want to end up in a situation where bindings are heavier than the 
+  objects being bound to
+* In larger applications, it can be more difficult to design the ViewModel up 
+  front to get the necessary amount of generalization
+
+
 
