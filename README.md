@@ -55,4 +55,4 @@
 - [x] - Make calculator [link](Small_Projects/Calculator) (will come back to this later and make it better)
 - [x] - Make pomodoro [link](Small_Projects/pomodoro)
 - [x] - Make CSS Framework [link](https://github.com/kelj0/kelj0-css)
-- [ ] - Simple github frontend
+- [x] - Simple github API client [link](Small_Projects/githubClient)

@@ -70,6 +70,29 @@ input{
     border-radius: 10px;
 }
 
+li{
+    background-color: aliceblue;
+    padding: 1%;
+    margin-top: 10px;
+    margin-right: 10%;
+    border: 1px solid black;
+}
 ul{
     list-style-type: none;
+    padding-bottom: 2%;
+    background-color: beige;
+}
+ul:nth-child(1){
+    border: 1px solid black;
+}
+ul:not(:first-child){
+    background-color: rgb(250, 252, 159);
+    margin-right: 10%;
+}
+
+#username{
+    font-size: 24px;
+}
+#bio{
+    font-size: 16px;
 }
