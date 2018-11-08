@@ -1,0 +1,75 @@
+/*MODIFIED*/
+/* 
+    kelj0-css
+*/
+
+/* ========Headings======== */
+h1{
+    border-bottom: 1px solid black;
+}
+h1{
+    border-bottom-width: 3px;
+}
+/* ========Buttons======== */
+button{
+    padding:6px 15px;
+    border-width: 1px;
+}
+
+.button__green{
+    background-color: rgb(31, 161, 42);
+    color: rgb(241, 241, 241);
+    font-weight: bold;
+}
+.button__green:hover{
+    border-width: 1px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.button__green:hover{border-color: blue;background-color: rgb(18, 95, 11);}
+
+.button__green:active{
+    border-color: chartreuse;
+}
+/* ========Grid======== */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr,1fr;
+    grid-template-rows: 1fr,1fr;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*You can remove this black border if you dont want (its just for
+easyer perception of grid
+*/
+[class*="col-"] {
+    float: left;
+    padding: 1px;
+    margin-bottom: 1px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+input{
+    width: 90%;
+    padding: 5px 0px;
+    border-radius: 10px;
+}
+
+ul{
+    list-style-type: none;
+}

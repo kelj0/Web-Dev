@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Simple Github client</title>
+        <link rel="stylesheet" href="css/kelj0.css">
+    </head>
+    <body>
+        <script src="js/jquery.js"></script>
+        <script src="js/script.js"></script>
+
+        <h1>Simple Github API</h1>
+        <div class="row">
+            <!--Left pannel (avatar, profile name..)-->
+            <div class="col-5">
+                <img id="avatar" src="",width="80",height="80">
+                <div id="username"></div>
+                <div id="bio"></div>
+            </div>
+            <!--Middle section(Repositories and search)-->
+            <div class="col-6">
+                <!--Search box and button-->
+                <div class="row">
+                    <div id="search_input" class="col-8">
+                        <input id="search" name="search" placeholder="Enter users name.." onsubmit="f()">
+                    </div>
+                         <div class="col-2">
+                            <input type="button" class="button__green" value="Search" onclick="f()">
+                        </div>
+                </div>
+                <!--Repositories-->
+                <div class="repo">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
