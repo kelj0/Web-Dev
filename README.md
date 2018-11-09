@@ -48,6 +48,10 @@
 - [x] - [You dont know JS part1](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)
 - [ ] - [You dont know JS part2](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypese)
 - [x] - [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+- [x] - [Styleguide](https://github.com/rwaldron/idiomatic.js/#all-code-in-any-code-base-should-look-like-a-single-person-typed-it-no-matter-how-many-people-contributed)
+- [ ] - [Vue Tutorial in 2018](https://coursetro.com/courses/23/Vue-Tutorial-in-2018---Learn-Vue.js-by-Example)
+- [ ] - https://vuejs.org/v2/guide/
+- [ ] - [Vue style guide](https://vuejs.org/v2/style-guide/)
 
 ### Projects
 - [x] - Copy of google static page [[done](Small_Projects/googleCopy)]
@@ -56,3 +60,5 @@
 - [x] - Make pomodoro [link](Small_Projects/pomodoro)
 - [x] - Make CSS Framework [link](https://github.com/kelj0/kelj0-css)
 - [x] - Simple github API client [link](Small_Projects/githubClient)
+- [ ] - [Pick](https://vuejsexamples.com/) and project example and implement it
+- [ ] - Pick an [API](https://github.com/toddmotto/public-apis) and build client for it

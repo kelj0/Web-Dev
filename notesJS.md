@@ -18,6 +18,7 @@
 
 ---
 -	[Design patterns](#design-patterns)
+-   [Vue](#vue)
 ---
 
 ### Hello world<a name="hello-world"></a>
@@ -1370,4 +1371,19 @@ Disadvantages
   front to get the necessary amount of generalization
 
 
+---
+### Vue<a name="vue"></a>
+
+Installing(tested on debian 9)
+```
+cd to/folder/where/your/project/is
+sudo apt-get install curl software-properties-common
+curl -sL https://deb.nodesource.com/setup_11.x | sudo bash -
+sudo apt-get install nodejs
+sudo npm install -g @vue/cli
+vue create vue-nameofproject
+-> Chose default(if you dont know what you are doing)
+cd vue-nameofproject
+sudo npm serve
+```
 
