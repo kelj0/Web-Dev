@@ -1374,7 +1374,14 @@ Disadvantages
 ---
 ### Vue<a name="vue"></a>
 
-Installing(tested on debian 9)
+-  [Install](#installing)
+-  [Hello world](#hello-world)
+-  [v-for](#v-for)
+-  [v-if](#v-if)
+
+---
+#### Installing
+(tested on debian 9)
 ```
 cd to/folder/where/your/project/is
 sudo apt-get install curl software-properties-common
@@ -1386,4 +1393,106 @@ vue create vue-nameofproject
 cd vue-nameofproject
 sudo npm serve
 ```
+
+---
+#### Hello world
+
+`[index.html]`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>    
+    <div id="app">
+      <p>{{ message }}</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+`[script.js]`
+```js
+var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Well well..'
+    }
+})
+```
+This would display "Well well.." in the browser
+
+---
+#### v-if
+```html
+<ul>
+  <li v-for="(data, index) in skills" :key='index'>{{index}}. {{data.skill}}</li>
+</ul>
+
+<p v-if="skills.length >= 1">You have more than 1 skill</p>
+<p v-else>You have less than or equal to 1 skill</p>
+```
+```js
+var app = new Vue({
+    el: '#app',
+    data: {
+      skills:[
+        {"skill":"front-end"},
+        {"skill":"back-end"}
+      ]
+    }
+})
+```
+
+---
+#### v-for
+
+**This are only snippets of code!**
+```html
+<ul>
+  <li v-for="(data,index) in skills" :key='index'>{{index}}. {{data.skill}}</li>
+</ul>
+```
+```js
+var app = new Vue({
+    el: '#app',
+    data: {
+      skills:[
+        {"skill":"front-end"},
+        {"skill":"back-end"}
+      ]
+    }
+})
+```
+**Displays**
+* 0. front-end
+* 1. back-end
+
+#### v-if
+```html
+<ul>
+  <li v-for="(data,index) in skills" :key='index'>{{index}}. {{data.skill}}</li>
+</ul>
+<p v-if="skills.length >= 1">You have more than 1 skills</p>
+<p v-else>You have less than or equal to 1 skill</p>
+```
+```js
+var app = new Vue({
+    el: '#app',
+    data: {
+      skills:[
+        {"skill":"front-end"},
+        {"skill":"back-end"}
+      ]
+    }
+})
+```
+**Displays**
+* 0. front-end
+* 1. back-end
+
+You have more than 1 skills
+
 
