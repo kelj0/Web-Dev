@@ -1376,8 +1376,8 @@ Disadvantages
 
 -  [Install](#installing)
 -  [Hello world](#hello-world)
--  [v-for](#v-for)
 -  [v-if](#v-if)
+-  [v-for](#v-for)
 
 ---
 #### Installing
@@ -1445,6 +1445,11 @@ var app = new Vue({
     }
 })
 ```
+**Displays**
+* 0. front-end
+* 1. back-end
+
+You have more than 1 skills
 
 ---
 #### v-for
@@ -1469,30 +1474,4 @@ var app = new Vue({
 **Displays**
 * 0. front-end
 * 1. back-end
-
-#### v-if
-```html
-<ul>
-  <li v-for="(data,index) in skills" :key='index'>{{index}}. {{data.skill}}</li>
-</ul>
-<p v-if="skills.length >= 1">You have more than 1 skills</p>
-<p v-else>You have less than or equal to 1 skill</p>
-```
-```js
-var app = new Vue({
-    el: '#app',
-    data: {
-      skills:[
-        {"skill":"front-end"},
-        {"skill":"back-end"}
-      ]
-    }
-})
-```
-**Displays**
-* 0. front-end
-* 1. back-end
-
-You have more than 1 skills
-
 
