@@ -1,0 +1,62 @@
+#app{
+    margin-left: 5%;
+}
+#infos{
+    list-style: none;
+}
+#user-pannel{
+    margin-right: 20px;
+}
+
+/*========Grid========*/
+.grid{
+    display: grid;
+    grid-template-columns: 1fr,1fr;
+    grid-template-rows: 1fr,1fr;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 1px;
+    margin-bottom: 1px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/*========Navbar========*/
+.top__navigation {
+    
+    overflow: hidden;
+}
+.top__navigation a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.top__navigation a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.top__navigation a.active {
+    background-color: #4CAF50;
+    color: white;
+}
