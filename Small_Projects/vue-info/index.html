@@ -28,13 +28,16 @@
                     </form>
                   </div>
               </div>
-              <div class="col-12">
-                <div class="top__navigation">
-                    <a v-on:click="getRepos" class="active">Repos</a>
-                    <a v-on:click="getFollowers" >Followers</a>
-                    <a v-on:click="getFollowing" >Following</a>
-                    <a v-on:click="getCommits" >Commits</a>
-                </div> 
+              <div v-if="search">
+                <div class="col-12">
+                    <nav class="top__navigation" v-bind:class="mode" v-on:click.prevent>
+                        <a class="repos" v-on:click="getRepos">Repos</a>
+                        <a class="followers" v-on:click="getFollowers" >Followers</a>
+                        <a class="following" v-on:click="getFollowing" >Following</a>
+                        <a class="commits" v-on:click="getCommits" >Commits</a>
+                    </nav>
+                  </div> 
+                </div>
               </div>
               <li id="infos" v-for="(data,index) in info":key='index'>
                 <div v-if="mode=='followers'">

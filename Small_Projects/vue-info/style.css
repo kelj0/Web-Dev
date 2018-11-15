@@ -40,23 +40,35 @@
 
 /*========Navbar========*/
 .top__navigation {
-    
-    overflow: hidden;
+    display:inline-block;
+    margin-top: 10px;
+    background-color:#e7e7e7;
+    box-shadow:0 1px 1px #ccc;
+    border-radius:2px;
 }
 .top__navigation a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bolder;
+    display:inline-block;
+    padding: 15px 10px;
+    color:rgb(26, 25, 25) !important;
+    font-weight:bold;
+    font-size:16px;
+    text-decoration:none !important;
+    line-height:1;
+    text-transform: uppercase;
+    background-color:transparent;
+
+    -webkit-transition:background-color 0.25s;
+    -moz-transition:background-color 0.25s;
+    transition:background-color 0.25s;
 }
 .top__navigation a:hover {
-    background-color: #ddd;
+    background-color: rgb(151, 151, 151);
     color: black;
 }
-.top__navigation a.active {
+nav.repos .repos,
+nav.followers .followers,
+nav.following .following,
+nav.commits .commits{
     background-color: #4CAF50;
-    color: white;
+    color: white !important;
 }
