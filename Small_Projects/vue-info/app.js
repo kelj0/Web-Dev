@@ -5,6 +5,7 @@ const app = new Vue({
     bio: '',
     url: '',
     repurl: '',
+    sorted: false,
     mode: '',
     search: false,
     info: null,
@@ -16,6 +17,7 @@ const app = new Vue({
       this.url += this.username;
       this.repurl += this.username +'/repos';
       this.search=true;
+      this.commits = {};
       axios
         .get(this.url)
         .then(response => (
@@ -28,6 +30,7 @@ const app = new Vue({
       this.getRepos();
     },
     getRepos(){
+      this.info = '';
       axios
       .get(this.repurl)
       .then(response =>(
@@ -36,15 +39,16 @@ const app = new Vue({
       this.mode = 'repos';
     },
     getFollowers(){
+      this.info = '';
       axios
         .get(this.url+'/followers')
         .then(response =>(
           this.info = response.data
       ));
-      
       this.mode = 'followers';
     },
     getFollowing(){
+      this.info = '';
       axios
         .get(this.url+'/following')
         .then(response =>(
@@ -53,7 +57,32 @@ const app = new Vue({
       this.mode = 'following';
     },
     getCommits(){
-      //TODO
+      this.info = [];
+      this.sorted = false;
+      axios
+        .get(this.repurl)
+        .then(response=>{
+          for(let element of response.data){
+            axios
+              .get((element.commits_url).slice(0,-6))
+              .then(resp=>{
+                for(let com of resp.data){
+                  let date = new Date(com.commit.committer.date);
+                  let rurl = com.html_url;      
+                  if(Math.abs(date.getDate()-(new Date).getDate())<3 && date.getMonth()==(new Date).getMonth())
+                    this.info.push({date:date.toString(),url: rurl});
+                }
+              });
+          };
+        })
+        .then(
+          this.info.sort(function(a,b){
+            return new Date(a.date) - new Date(b.date);
+          })
+        )
+        .then(
+          this.sorted = true
+        );
       this.mode = 'commits';
     }
   }, 

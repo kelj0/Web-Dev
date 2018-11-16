@@ -7,52 +7,61 @@
   </head>
   <body>    
     <div id="app">
-        <div class="row">
-            <!--Left pannel (avatar, profile name..)-->
-            <div id="user-pannel" class="col-5">
-                <img id="avatar">
-                <div id="username">{{username}}</div>
-                <div id="bio">{{bio}}</div>
+      <div class="row">
+        <!--Left pannel (avatar, profile name..)-->
+          <div id="user-pannel" class="col-5">
+            <img id="avatar">
+              <div id="username">{{username}}</div>
+              <div id="bio">{{bio}}</div>
+          </div>
+          <!--Middle section(info)-->
+          <div class="col-6">
+            <!--Search box-->
+            <div class="row">
+              <div class="col-8">
+                <form id="submit-form" @submit.prevent="getInfo">
+                  <input 
+                  type="text" 
+                  placeholder="Enter username.." 
+                  v-model="username" 
+                  name="username">
+                </form>
+              </div>
             </div>
-            <!--Middle section(info)-->
-            <div class="col-6">
-                <!--Search box-->
-              <div class="row">
-                  <div class="col-8">
-                    <form id="submit-form" @submit.prevent="getInfo">
-                      <input 
-                      type="text" 
-                      placeholder="Enter username.." 
-                      v-model="username" 
-                      name="username">
-                    </form>
+            <div class="row">
+              <div class="col-12">
+                <div v-if="search">
+                  <nav class="top__navigation" v-bind:class="mode" v-on:click.prevent>
+                      <a class="repos" v-on:click="getRepos">Repos</a>
+                      <a class="followers" v-on:click="getFollowers" >Followers</a>
+                      <a class="following" v-on:click="getFollowing" >Following</a>
+                      <a class="commits" v-on:click="getCommits" >Commits</a>
+                  </nav>
+                </div> 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <li id="infos" v-for="(data,index) in info":key='index'>
+                  <div v-if="mode=='followers'">
+                    {{data.login}}
                   </div>
-              </div>
-              <div v-if="search">
-                <div class="col-12">
-                    <nav class="top__navigation" v-bind:class="mode" v-on:click.prevent>
-                        <a class="repos" v-on:click="getRepos">Repos</a>
-                        <a class="followers" v-on:click="getFollowers" >Followers</a>
-                        <a class="following" v-on:click="getFollowing" >Following</a>
-                        <a class="commits" v-on:click="getCommits" >Commits</a>
-                    </nav>
-                  </div> 
-                </div>
-              </div>
-              <li id="infos" v-for="(data,index) in info":key='index'>
-                <div v-if="mode=='followers'">
-                  {{data.login}}
-                </div>
                 <div v-else-if="mode=='following'">
                   {{data.login}}
                 </div>
                 <div v-else-if="mode=='commits'">
-                  TEST
+                  <div v-if="sorted">
+                    <div class="repocommits">
+                      DATE {{ data.date }} , <a v-bind:href="data.url">LINK</a>
+                    </div>
+                  </div>
                 </div>
                 <div v-else="mode=='repos'">
                   {{ data.name }}
                 </div>
               </li>
+            </div>
+          </div>
         </div>
       </div>
     </div>
