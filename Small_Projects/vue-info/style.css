@@ -1,3 +1,7 @@
+body{
+    background-color: #e7e7e7;
+}
+
 #app{
     margin-left: 5%;
 }
@@ -8,6 +12,17 @@
     margin-right: 20px;
 }
 
+.plist{
+    background-color: burlywood;
+    border-radius: 10px;
+    padding: 3px 3px;
+}
+.plist a{
+    text-decoration: none;
+    background-color: bisque;
+    color: #4CAF50;;
+    font-weight: bolder;
+}
 #submit-form-before{
     position: fixed;
     top: 50%;
@@ -23,6 +38,26 @@
     border-radius: 30px;
     border:2px solid lightskyblue;
 }
+
+/*=====Commits=====*/
+.commit{
+    background-color: burlywood;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.commit a{
+    text-decoration: none;
+    background-color: bisque;
+    color: #4CAF50;;
+    font-weight: bolder;
+}
+#desc a{
+    font-weight: bold;
+    color: #4CAF50;
+    background-color: bisque;
+}
+
 
 /*========Grid========*/
 .grid{
@@ -58,7 +93,7 @@
 .top__navigation {
     display:inline-block;
     margin-top: 10px;
-    background-color:#e7e7e7;
+    background-color:burlywood;
     box-shadow:0 1px 1px #ccc;
     border-radius:2px;
 }
@@ -77,7 +112,7 @@
     transition:background-color 0.25s;
 }
 .top__navigation a:hover {
-    background-color: rgb(151, 151, 151);
+    background-color: bisque;
     color: black;
 }
 nav.repos .repos,

@@ -67,10 +67,11 @@ const app = new Vue({
               .get((element.commits_url).slice(0,-6))
               .then(resp=>{
                 for(let com of resp.data){
+                  console.log(element)
                   let date = new Date(com.commit.committer.date);
                   let rurl = com.html_url;      
                   if(Math.abs(date.getDate()-(new Date).getDate())<3 && date.getMonth()==(new Date).getMonth())
-                    this.info.push({date:date.toString(),url: rurl});
+                    this.info.push({date:date.toLocaleString(),url: rurl, msg:com.commit.message,rname:element.name,rurl:element.html_url});
                 }
               });
           };

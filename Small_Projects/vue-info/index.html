@@ -43,20 +43,31 @@
                 <div class="col-12">
                   <li id="infos" v-for="(data,index) in info":key='index'>
                     <div v-if="mode=='followers'">
-                      {{data.login}}
+                      <p class="plist"><a v-bind:href="data.html_url">{{data.login}}</a></p>
                     </div>
                   <div v-else-if="mode=='following'">
-                    {{data.login}}
+                      <p class="plist"><a v-bind:href="data.html_url">{{data.login}}</a></p>
                   </div>
                   <div v-else-if="mode=='commits'">
                     <div v-if="sorted">
                       <div class="repocommits">
-                        DATE {{ data.date }} , <a v-bind:href="data.url">LINK</a>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="commit">
+                              ({{ data.date }}) New commit in > <a v-bind:href="data.rurl">{{data.rname}}</a>
+                              <div class="row">
+                                <div id="desc" class="col-12">
+                                  Desc: <a v-bind:href="data.url">{{data.msg}}</a>
+                                </div>
+                              </div> 
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div v-else="mode=='repos'">
-                    {{ data.name }}
+                      <p class="plist"><a v-bind:href="data.html_url">{{data.name}}</a></p>
                   </div>
                 </li>
               </div>
@@ -74,7 +85,7 @@
         </form>
       </div>
     </div>
-    
+
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
