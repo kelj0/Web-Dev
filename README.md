@@ -60,5 +60,4 @@
 - [x] - Make pomodoro [link](Small_Projects/pomodoro)
 - [x] - Make CSS Framework [link](https://github.com/kelj0/kelj0-css)
 - [x] - Simple github API client [link](Small_Projects/githubClient)
-- [ ] - [Pick](https://vuejsexamples.com/) and project example and implement it
-- [ ] - Pick an [API](https://github.com/toddmotto/public-apis) and build client for it
+- [ ] - Pick an [API](https://github.com/toddmotto/public-apis) and build client for it [link](Small_Projects/vue-info)
