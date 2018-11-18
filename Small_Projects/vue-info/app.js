@@ -2,6 +2,7 @@ const app = new Vue({
   el: '#app',
   data: {
     username: '',
+    usr:'',
     bio: '',
     url: '',
     repurl: '',
@@ -15,6 +16,7 @@ const app = new Vue({
       this.url = 'https://api.github.com/users/';
       this.repurl = 'https://api.github.com/users/';
       this.url += this.username;
+      this.usr = this.username;
       this.repurl += this.username +'/repos';
       this.search=true;
       this.commits = {};
