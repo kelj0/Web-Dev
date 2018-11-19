@@ -78,15 +78,12 @@ const app = new Vue({
               });
           };
         })
-        .then(
-          this.info.sort(function(a,b){
-            return new Date(a.date) - new Date(b.date);
-          })
-        )
-        .then(
-          this.sorted = true
-        );
       this.mode = 'commits';
     }
-  }, 
+  },
+  mounted: function(){
+    this.info.sort(function(a,b){
+      return new Date(a.date) - new Date(b.date);
+    })
+  } 
 })
