@@ -12,16 +12,16 @@ body{
     margin-right: 20px;
 }
 
-.plist{
-    background-color: burlywood;
-    border-radius: 10px;
-    padding: 3px 3px;
-}
-.plist a{
+a{
     text-decoration: none;
-    background-color: bisque;
-    color: #4CAF50;;
+    color: #4CAF50;
     font-weight: bolder;
+}
+
+.commit{
+    background-color: rgb(216, 201, 182);
+    padding:3px 3px;
+    border-radius:0;
 }
 
 #submit-form-before{
@@ -29,7 +29,7 @@ body{
     top: 50%;
     left: 50%;
     margin-top: -100px;
-    margin-left: -200px;
+    margin-left: -220px;
 }
 #submit-form-before input{
     padding: 25px 50px;
@@ -39,26 +39,6 @@ body{
     border-radius: 30px;
     border:2px solid lightskyblue;
 }
-
-/*=====Commits=====*/
-.commit{
-    background-color: burlywood;
-    border-radius: 10px;
-    padding: 10px 20px;
-}
-
-.commit a{
-    text-decoration: none;
-    background-color: bisque;
-    color: #4CAF50;;
-    font-weight: bolder;
-}
-#desc a{
-    font-weight: bold;
-    color: #4CAF50;
-    background-color: bisque;
-}
-
 
 /*========Grid========*/
 .grid{
@@ -94,7 +74,7 @@ body{
 .top__navigation {
     display:inline-block;
     margin-top: 10px;
-    background-color:burlywood;
+    background-color:rgb(246, 239, 230);
     box-shadow:0 1px 1px #ccc;
     border-radius:2px;
 }

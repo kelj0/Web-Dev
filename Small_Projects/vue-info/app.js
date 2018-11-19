@@ -6,7 +6,6 @@ const app = new Vue({
     bio: '',
     url: '',
     repurl: '',
-    sorted: false,
     mode: '',
     search: false,
     info: null,
@@ -75,15 +74,15 @@ const app = new Vue({
                   if(Math.abs(date.getDate()-(new Date).getDate())<3 && date.getMonth()==(new Date).getMonth())
                     this.info.push({date:date.toLocaleString(),url: rurl, msg:com.commit.message,rname:element.name,rurl:element.html_url});
                 }
-              });
+              })
           };
         })
       this.mode = 'commits';
     }
   },
   mounted: function(){
-    this.info.sort(function(a,b){
-      return new Date(a.date) - new Date(b.date);
-    })
-  } 
+      this.info.sort(function(a,b){
+        return new Date(a.date) - new Date(b.date);
+      })
+    } 
 })

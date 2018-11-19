@@ -49,17 +49,15 @@
                       <p class="plist"><a v-bind:href="data.html_url">{{data.login}}</a></p>
                   </div>
                   <div v-else-if="mode=='commits'">
-                    <div class="repocommits">
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="commit">
-                            ({{ data.date }}) New commit in > <a v-bind:href="data.rurl">{{data.rname}}</a>
-                            <div class="row">
-                              <div id="desc" class="col-12">
-                                Desc: <a v-bind:href="data.url">{{data.msg}}</a>
-                              </div>
-                            </div> 
-                          </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="commit">
+                          New commit in > <a v-bind:href="data.rurl">{{data.rname}}</a>
+                          <div class="row">
+                            <div id="desc" class="col-12">
+                              <p class="plist">({{ data.date }}) Desc: <a v-bind:href="data.url">{{data.msg}}</a></p>
+                            </div>
+                          </div> 
                         </div>
                       </div>
                     </div>
