@@ -46,12 +46,12 @@
 ### JS
 - [x] - https://eloquentjavascript.net/
 - [x] - [You dont know JS part1](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)
-- [ ] - [You dont know JS part2](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypese)
+- [x] - [You dont know JS part2](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypese)
 - [x] - [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 - [x] - [Styleguide](https://github.com/rwaldron/idiomatic.js/#all-code-in-any-code-base-should-look-like-a-single-person-typed-it-no-matter-how-many-people-contributed)
 - [x] - [Vue Tutorial in 2018](https://coursetro.com/courses/23/Vue-Tutorial-in-2018---Learn-Vue.js-by-Example)
 - [x] - https://vuejs.org/v2/guide/
-- [ ] - [Vue style guide](https://vuejs.org/v2/style-guide/)
+- [x] - [Vue style guide](https://vuejs.org/v2/style-guide/)
 
 ### Projects
 - [x] - Copy of google static page [[done](Small_Projects/googleCopy)]
