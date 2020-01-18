@@ -56,7 +56,7 @@
 ### Projects
 - [x] - Copy of google static page [[done](Small_Projects/googleCopy)]
 - [x] - [Download](http://www.csszengarden.com/) a HTML file and make css for it [[done](Small_Projects/cssGarden)]
-- [x] - Make calculator [[done](Small_Projects/Calculator)] (will come back to this later and make it better)
+- [x] - Make calculator [[done](Small_Projects/Calculator)]
 - [x] - Make pomodoro [[done](Small_Projects/pomodoro)]
 - [x] - Make CSS Framework [[done](https://github.com/kelj0/kelj0-css)]
 - [x] - Simple github API client [[done](Small_Projects/githubClient)]
